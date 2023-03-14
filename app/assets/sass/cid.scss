@@ -93,6 +93,22 @@ $cid-bright-green: #71d76d;
 	font-family: "SouvenirStd-Light";
 }
 
+a:link, .cid-header__link, .cid-header__link:visited {
+	font-family: "geograph";
+	color: $cid-mid-green;
+}
+
+a:active {
+	color: #000000;
+	background-color: $cid-bright-green;
+	
+}
+
+// Override inset text.
+.govuk-inset-text {
+	border-left: 10px solid $cid-bright-green;
+}
+
 // Override heading fonts to use Souvenir
 
 .govuk-heading-xl, .govuk-heading-l {
