@@ -1,0 +1,143 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+Finish - what now? – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Finish - what now?
+      </h1>
+
+      <p>
+        Don’t make any changes to your Advance Decision after it’s been signed. If you do need to change it, come back and edit it, then print the new version, sign it and get it witnessed. You can change anything in your Advance Decision by logging back in and revisiting each section using the menu on the left.
+      </p>
+
+      <h2 class="govuk-heading-l">
+        Review my Advance Decision
+      </h2>
+
+      <p>
+        You should review your Advance Decision every two years, or sooner if your health changes or you are going into hospital.
+      </p>
+
+      <p>
+        Your document has a section for you to review your Advance Decision. If you are still happy that it reflects what you want then you just have to sign and date in the space provided.
+      </p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Reviewing your Advance Decision
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p>
+            It is a good idea to review and re-sign your Advance Decision every two years. The more recent the signature, the more confident your healthcare team will be that what you have said in your Advance Decision is still what you want.
+          </p>
+
+          <p>
+            It is also a good idea to review and re-sign your Advance Decision if your health changes, or if you are going into hospital for treatment or surgery.
+          </p>
+
+          <p>
+            To review your Advance Decision you should read it and check you are happy with your decisions and the information it contains. If you are happy that it still reflects your wishes then you should sign and date it in the space provided. Once you have reviewed it you should give a copy of the updated version to anyone who you shared your original Advance Decision with.
+          </p>
+
+          <p>
+            If you would like to change the decisions in your form then you should make a new one. If you make changes to an existing form, it could make it hard for others to read. Filling out a new form will ensure that your wishes are clear and easy to follow. You will also need to make sure that all copies of your old Advance Decision have been destroyed (for example those held by your GP or family and friends).
+          </p>
+
+          <p>
+            You can cancel your Advance Decision completely by destroying it and telling anyone who has a copy to do the same.
+          </p>
+
+        </div>
+      </details>
+
+      <form action="finished" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+              Would you like us to send you an email in 2 years time reminding you to review your Advance Decision?
+            </legend>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="2-year-reminder" name="2-year-reminder" type="checkbox" value="2-year-reminder-opt-in">
+                <label class="govuk-label govuk-checkboxes__label" for="2-year-reminder">
+                  Tick this box if you would like us to send you a reminder
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <h2 class="govuk-heading-l">
+          Changing my mind
+        </h2>
+
+        <p>
+          If you can make your own decisions then you can change your mind at any time.
+        </p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Changing your Advance Decision
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+  
+            <p>
+              While you have capacity you can change your mind at any time. If you would like to change the content of your Advance Decision then you can easily do this by logging back into your My Decisions account. Once you have made any changes, and the new form has been signed and witnessed, you should give copies of the new form to anyone who had the old version. You should tell them to destroy their copies of the old version.
+            </p>
+
+            <p>
+              You can also cancel it completely by destroying it and advising anyone who has a copy to do the same.
+            </p>
+
+            <p>
+              Remember that your Advance Decision will only come into effect when you lack capacity. So if you still have capacity to make decisions about medical treatment, your Advance Decision will not apply.
+            </p>
+  
+          </div>
+        </details>
+
+        <h2 class="govuk-heading-l">
+          Make an Advance Statement
+        </h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+              Would you also like to make an Advance Statement?
+            </legend>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="create-advance-statement" name="create-advance-statement" type="checkbox" value="create-advance-statement">
+                <label class="govuk-label govuk-checkboxes__label" for="create-advance-statement">
+                  Tick this box if you would like to also make an Advance Statement
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
