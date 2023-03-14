@@ -1,0 +1,105 @@
+// The CID stylesheet is used if you need to create pages in your
+// prototype with Compassion in Dying branding.
+
+// Import settings first so we can override them before importing all of GOV.UK Frontend
+// If you need to enable compatibility mode or the legacy palette, do that *before* this import.
+@import "node_modules/govuk-frontend/govuk/settings/all";
+
+
+// Import CID fonts and override the default GOV.UK Frontend font stack.
+@font-face{
+	font-family: 'Souvenir';
+	src: url( '../fonts/SouvenirGreek-Demi.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirGreek-Light.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-Bold.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-BoldItalic.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-Demi.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-DemiItalic.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-Light.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-LightItalic.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-Medium.otf' ) format( 'otf' ),
+	url( '../fonts/SouvenirStd-MediumItalic.otf' ) format( 'otf' );
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'geograph';
+	font-weight: 400;
+	font-style: normal;
+	src: url( '../fonts/geograph-regular.woff2' ) format( 'woff2' );
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'geograph';
+	font-weight: 400;
+	font-style: italic;
+	src: url( '../fonts/geograph-regular-italic.woff2' ) format( 'woff2' );
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'geograph';
+	font-weight: 700;
+	font-style: normal;
+	src: url( '../fonts/geograph-medium.woff2' ) format( 'woff2' );
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'geograph';
+	font-weight: 700;
+	font-style: italic;
+	src: url( '../fonts/geograph-medium-italic.woff2' ) format( 'woff2' );
+}
+  
+$govuk-font-family: "geograph", "Arial";
+
+.govuk-heading-xl {
+    font-family: "SouvenirStd-Demi", "Georgia";
+  }
+
+// Override GOV.UK brand colour.
+$govuk-brand-colour: #00403a;
+
+// Override the body and canvas background colour, which is normally grey.
+$govuk-body-background-colour: #ffffff;
+$govuk-canvas-background-colour: #ffffff;
+
+@import "application";
+
+// Override heading fonts to use Souvenir
+
+.govuk-heading-xl, .govuk-heading-l {
+    font-family: "SouvenirStd-Light", "Georgia";
+    color: #00403a;
+  }
+
+.govuk-heading-m, .govuk-heading-s {
+    font-family: "SouvenirGreek-Light", "Georgia";
+    color: #00403a;
+  }
+
+// Override caption colour
+.govuk-caption-xl {
+    color: #00403a;
+}
+
+// Override default body and paragraph colours
+
+p, .govuk-body, .govuk-body-m {
+    color: #00403a;
+}
+
+// Override link colour
+
+a {
+    color: #32723c;
+}
+
+// Override details component
+
+.govuk-details__summary {
+    color: #32723c;
+    font-weight: 700;
+}
