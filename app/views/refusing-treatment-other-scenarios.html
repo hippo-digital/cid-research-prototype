@@ -1,0 +1,61 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  Refusing treatment in other scenarios – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Refusing treatment in other scenarios</h1>
+
+      <p>
+        If there are other scenarios in which you would like to refuse treatment, or if there are other treatments that you would like to refuse, you can write them here. Remember that what you say here will only come into effect if you don’t have capacity to make a decision for yourself.
+      </p>
+
+      <p>
+        When writing in this space you must write the treatments that you want to refuse AND the scenarios in which you would like to refuse them.
+        </p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            About writing your own refusal
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p>
+            [Extra detail to add]
+          </p>
+
+        </div>
+      </details>
+
+      <form action="refusing-treatment-to-avoid-any-doubt" method="post" novalidate>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="own-refusal">
+              Write your own refusal here
+            </label>
+          </h1>
+          <textarea class="govuk-textarea" id="own-refusal" name="own-refusal" rows="5" aria-describedby="own-refusal-hint"></textarea>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+      <p>
+        <a href="ad-task-list-2">Save and continue later</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

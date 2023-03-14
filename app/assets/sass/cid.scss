@@ -66,8 +66,21 @@ $govuk-brand-colour: #00403a;
 $govuk-body-background-colour: #ffffff;
 $govuk-canvas-background-colour: #ffffff;
 
-
+// IMPORT DEFAULT GOV.UK STYLES.
 @import "application";
+
+// Override button radius.
+.govuk-button, .govuk-button:visited, .govuk-button:link {
+	border-radius: 6px;
+	padding: 13px 20px 15px;
+	background-color: #71d76d;
+	color: #00403a;
+}
+
+.govuk-button:hover {
+	background-color: #00403a;
+	color: #ffffff;
+}
 
 // Set CID primary colours.
 $cid-dark-green: #00403a;
@@ -101,7 +114,10 @@ a:link, .cid-header__link, .cid-header__link:visited {
 a:active {
 	color: #000000;
 	background-color: $cid-bright-green;
-	
+}
+
+a:visited {
+	color: #00403a;
 }
 
 // Override inset text.
@@ -120,6 +136,10 @@ a:active {
     font-family: "SouvenirGreek-Light", "Georgia";
     color: #00403a;
   }
+
+.govuk-panel__title {
+	font-family: "SouvenirGreek-Light", "Georgia";
+}
 
 // Override caption colour
 .govuk-caption-xl {

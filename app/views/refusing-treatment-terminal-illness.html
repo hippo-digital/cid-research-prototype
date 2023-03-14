@@ -1,0 +1,95 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  Refusing treatment if I have a terminal illness – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Refusing treatment if I have a terminal illness</h1>
+
+      <p>
+        A terminal illness is an illness that has reached a stage where it cannot be cured and is likely to cause a person to die within a limited amount of time.
+      </p>
+
+      <p>
+        There are many conditions that can have a terminal stage, including cancer, heart failure, renal failure and lung disease.
+      </p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            About terminal illness
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p>
+            [Extra detail to add]
+          </p>
+
+        </div>
+      </details>
+
+      <form action="refusing-treatment-other-scenarios" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="terminal-illness-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you want to include terminal illness in your Advance Decision?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="terminal-illness" name="terminal-illness" type="radio" value="no" data-aria-controls="conditional-terminal-illness">
+                <label class="govuk-label govuk-radios__label" for="terminal-illness">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="terminal-illness-2" name="terminal-illness" type="radio" value="yes" data-aria-controls="conditional-terminal-illness-2">
+                <label class="govuk-label govuk-radios__label" for="terminal-illness-2">
+                  Yes, please show me further options
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-terminal-illness-2">
+                <p>
+                  You can include the scenario below in your Advance Decision by ticking the box next to it. Click on the question mark for more information on what the scenario means.
+                </p>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend--m">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="refuse-all-life-sustaining-treatment" name="refuse-all-life-sustaining-treatment" type="checkbox" value="refuse-all-life-sustaining-treatment">
+                          <label class="govuk-label govuk-checkboxes__label" for="refuse-all-life-sustaining-treatment">
+                            If I have any terminal illness, and I can no longer make or communicate decisions about my medical treatment, and I am unlikely to regain the ability to make these decisions, then I refuse all life-sustaining treatment.
+                          </label>
+                        </div>
+                      </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+      <p>
+        <a href="ad-task-list-2">Save and continue later</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
