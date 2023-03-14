@@ -66,7 +66,32 @@ $govuk-brand-colour: #00403a;
 $govuk-body-background-colour: #ffffff;
 $govuk-canvas-background-colour: #ffffff;
 
+
 @import "application";
+
+// Set CID primary colours.
+$cid-dark-green: #00403a;
+$cid-mid-green: #32723c;
+$cid-bright-green: #71d76d;
+
+// Override header styles.
+.govuk-header {
+	border-bottom: 0px;
+	background-color: #ffffff;
+}
+
+.govuk-header__container {
+	border-bottom: 0px;
+}
+
+.govuk-header__link--homepage {
+	margin-right: 0px;
+}
+
+.govuk-header__content, .govuk-header__link:link, .govuk-header__link:visited, .govuk-header__service-name {
+	color: $cid-dark-green;
+	font-family: "SouvenirStd-Light";
+}
 
 // Override heading fonts to use Souvenir
 
