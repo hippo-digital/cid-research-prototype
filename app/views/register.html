@@ -1,7 +1,7 @@
 {% extends "layout_cid_logged_out.html" %}
 
 {% block pageTitle %}
-Create an account – {{ serviceName }}
+  Create an account – {{ serviceName }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,19 +26,19 @@ Create an account – {{ serviceName }}
 
       <form action="registered" method="post" novalidate>
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-label--m" for="email-address">
+          <label class="govuk-label govuk-label" for="email-address">
             Email Address
           </label>
           <input class="govuk-input govuk-input" id="email-address" name="email-address" type="text" aria-describedby="email-address-hint">
         </div>
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-label--m" for="password">
+          <label class="govuk-label govuk-label" for="password">
             Password
           </label>
           <input class="govuk-input govuk-input" id="password" name="password" type="password" aria-describedby="password-hint">
         </div>
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-label--m" for="retype-password">
+          <label class="govuk-label govuk-label" for="retype-password">
             Retype Password
           </label>
           <input class="govuk-input govuk-input" id="retype-password" name="retype-password" type="password" aria-describedby="retype-password-hint">
