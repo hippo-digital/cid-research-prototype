@@ -1,0 +1,150 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  Refusing treatment if I have a disease of the central nervous system – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Refusing treatment if I have a disease of the central nervous system</h1>
+
+      <p>
+        Diseases of the central nervous system cause damage to the cells of the brain or spinal cord. This can have a large impact on the way we think, move or react to things. Examples of these types of conditions include motor neurone disease (MND), Parkinson’s disease, multiple sclerosis (MS) and Huntington’s disease.
+      </p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            About diseases of the central nervous system
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p>
+            [Extra detail to add]
+          </p>
+
+        </div>
+      </details>
+
+      <p>
+        In the advanced stages, many diseases of the central nervous system can cause you to lose capacity to make decisions about your care and treatment. In this situation you might want to refuse treatments aimed at sustaining your life.
+      </p>
+
+      <form action="#" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="central-nervous-system-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you want to include diseases of the central nervous system in your Advance Decision?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="central-nervous-system" name="central-nervous-system" type="radio" value="no" data-aria-controls="conditional-central-nervous-system">
+                <label class="govuk-label govuk-radios__label" for="central-nervous-system">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="central-nervous-system-2" name="central-nervous-system" type="radio" value="yes" data-aria-controls="conditional-central-nervous-system-2">
+                <label class="govuk-label govuk-radios__label" for="central-nervous-system-2">
+                  Yes, please show me further options
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-central-nervous-system-2">
+                <p>
+                  Some people with a disease of the central nervous system might lack capacity to make decisions about their treatment but still have what you consider an acceptable quality of life. Because of this, it’s important to think about when you would like your Advance Decision to take effect. You can choose whether you want your Advance Decision to take effect as soon as you lose capacity to make a decision about your treatment, or only when, after losing capacity, you also show certain symptoms or behaviours.                </p>
+                <p>
+                  You can include one of the scenarios below in your Advance Decision by ticking the box next to it (you can only choose one). Click on the question marks for more information on what each scenario means.
+                </p>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend--m">
+                      If I have a disease of the central nervous system and I can no longer make or communicate decisions about my medical treatment, and I am unlikely to regain the ability to make these decisions, then…                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="refuse-all-central-nervous-system" name="refuse-all-central-nervous-system" type="radio" value="refuse-all-central-nervous-system">
+                        <label class="govuk-label govuk-radios__label" for="refuse-all-central-nervous-system">
+                          I refuse all life-sustaining treatment.
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="refuse-all-central-nervous-system-2" name="refuse-all-central-nervous-system" type="radio" value="refuse-all-central-nervous-system-with-symptoms">
+                        <label class="govuk-label govuk-radios__label" for="refuse-all-central-nervous-system-2">
+                          I refuse all life-sustaining treatment if I also show any of the following symptoms or behaviours (tick all that apply):
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="unaware-of-surroundings" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="unaware-of-surroundings">
+                          <label class="govuk-label govuk-checkboxes__label" for="unaware-of-surroundings">
+                            I am persistently unaware of my surroundings
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="unable-to-recognise-people-close-to-me" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="unable-to-recognise-people-close-to-me">
+                          <label class="govuk-label govuk-checkboxes__label" for="unable-to-recognise-people-close-to-me">
+                            I am persistently unable to recognise people close to me
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="anxious-or-agitated" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="anxious-or-agitated">
+                          <label class="govuk-label govuk-checkboxes__label" for="anxious-or-agitated">
+                            I am persistently anxious or agitated
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="unable-to-attend-to-my-personal-hygiene" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="unable-to-attend-to-my-personal-hygiene">
+                          <label class="govuk-label govuk-checkboxes__label" for="unable-to-attend-to-my-personal-hygiene">
+                            I am unable to attend to my personal hygiene
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="unable-to-swallow" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="unable-to-swallow">
+                          <label class="govuk-label govuk-checkboxes__label" for="unable-to-swallow">
+                            I am unable to swallow
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="unable-to-interact-with-others" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="unable-to-interact-with-others">
+                          <label class="govuk-label govuk-checkboxes__label" for="unable-to-interact-with-others">
+                            I am unable to interact with others
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="other-symptoms" name="refuse-central-nervous-system-with-symptoms" type="checkbox" value="other-symptoms">
+                          <label class="govuk-label govuk-checkboxes__label" for="other-symptoms">
+                            Other symptoms or behaviours as specified below
+                          </label>
+                        </div>
+                        <div class="govuk-form-group">
+                          <textarea class="govuk-textarea" id="other-symptoms-details" name="other-symptoms" rows="5"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+      <p>
+        <a href="#">Save and continue later</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
