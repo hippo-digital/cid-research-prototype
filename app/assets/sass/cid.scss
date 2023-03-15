@@ -90,7 +90,7 @@ $cid-bright-green: #71d76d;
 // Override header styles.
 .govuk-header {
 	border-bottom: 0px;
-	background-color: #ffffff;
+	background-color: #00403a;
 }
 
 .govuk-header__container {
@@ -102,13 +102,13 @@ $cid-bright-green: #71d76d;
 }
 
 .govuk-header__content, .govuk-header__link:link, .govuk-header__link:visited, .govuk-header__service-name {
-	color: $cid-dark-green;
+	color: #ffffff;
 	font-family: "SouvenirStd-Light";
 }
 
 a:link, .cid-header__link, .cid-header__link:visited {
 	font-family: "geograph";
-	color: $cid-mid-green;
+	color: #ffffff;
 }
 
 a:active {
