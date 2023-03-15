@@ -106,7 +106,7 @@ $cid-bright-green: #71d76d;
 	font-family: "SouvenirStd-Light";
 }
 
-a:link, .cid-header__link, .cid-header__link:visited {
+.cid-header__link:link, .cid-header__link:visited {
 	font-family: "geograph";
 	color: #ffffff;
 }
@@ -154,7 +154,7 @@ p, .govuk-body, .govuk-body-m {
 
 // Override link colour
 
-a {
+a, a:link {
     color: #32723c;
 }
 
