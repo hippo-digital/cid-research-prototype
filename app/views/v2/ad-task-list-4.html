@@ -1,0 +1,154 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  Create Advance Decision – {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Create Advance Decision
+      </h1>
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Advance Decision incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 5 sections.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Personal details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="about-me" aria-describedby="about-me-status">
+                  About me
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="about-me-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Refusing treatment
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment" aria-describedby="about-me-status">
+                  Refusing treatment
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-1-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment-dementia" aria-describedby="about-me-status">
+                  Dementia
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-1-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment-brain-injury" aria-describedby="about-me-status">
+                  Brain injury
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-2-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment-disease-of-the-central-nervous-system" aria-describedby="about-me-status">
+                  Diseases of the central nervous system
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-3-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment-terminal-illness" aria-describedby="about-me-status">
+                  Terminal illness
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-4-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment-other-scenarios" aria-describedby="about-me-status">
+                  Other scenarios
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-5-status">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="refusing-treatment-to-avoid-any-doubt" aria-describedby="about-me-status">
+                  To avoid doubt
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="refusing-treatment-6-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Why I am making this Advance decision
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="my-values" aria-describedby="my-values-status">
+                  My values
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="my-values-1-status">Completed</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> My health
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="my-health" aria-describedby="my-health-status">
+                  My health
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="my-health-1-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Review
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Next steps
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="review-1-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Finish
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="review-2-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

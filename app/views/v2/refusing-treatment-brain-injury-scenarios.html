@@ -1,0 +1,46 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+If I have a brain injury following a stroke, head injury or any other cause, and I can no longer make or communicate decisions about my medical treatment, and I am unlikely to regain the ability to make these decisions, then… – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v2/refusing-treatment-terminal-illness-routing" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              If I have a brain injury following a stroke, head injury or any other cause, and I can no longer make or communicate decisions about my medical treatment, and I am unlikely to regain the ability to make these decisions, then…
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="refuse-lst-brain-injury-symptoms-or-behaviours" name="refuse-lst-brain-injury-symptoms-or-behaviours" type="radio" value="refuse-all">
+              <label class="govuk-label govuk-radios__label" for="refuse-lst-brain-injury-symptoms-or-behaviours">
+                I refuse all life-sustaining treatment
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="refuse-lst-brain-injury-symptoms-or-behaviours-2" name="refuse-lst-brain-injury-symptoms-or-behaviours" type="radio" value="refuse-all-but-certain-symptoms-or-behaviours">
+              <label class="govuk-label govuk-radios__label" for="refuse-lst-brain-injury-symptoms-or-behaviours-2">
+                I refuse all life-sustaining treatment but only if I also show specific symptoms or behaviours
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

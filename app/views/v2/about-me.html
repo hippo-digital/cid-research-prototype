@@ -1,0 +1,124 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  About me – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">About me</h1>
+
+      <p>
+        These are the details of the person who is making the Advance Decision. You don’t have to be this person – you might just be helping someone else to fill out this form. If you are helping someone else to complete it then all the information, statements and decisions within it must be their own.
+      </p>
+
+      <form action="refusing-treatment" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="title">
+            Title
+          </label>
+          <input class="govuk-input govuk-input govuk-!-width-one-third" id="title" name="title" type="text" aria-describedby="title-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="first-name">
+            First name
+          </label>
+          <input class="govuk-input govuk-input" id="first-name" name="first-name" type="text" aria-describedby="first-name-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="middle-names">
+            Middle name/s
+          </label>
+          <input class="govuk-input govuk-input" id="middle-names" name="middle-names" type="text" aria-describedby="middle-names-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="surname">
+            Surname
+          </label>
+          <input class="govuk-input govuk-input" id="surname" name="surname" type="text" aria-describedby="surname-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="address-line-1">
+            Address line 1
+          </label>
+          <input class="govuk-input govuk-input" id="address-line-1" name="address-line-1" type="text" aria-describedby="address-line-1-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="address-line-2">
+            Address line 2
+          </label>
+          <input class="govuk-input govuk-input" id="address-line-2" name="address-line-2" type="text" aria-describedby="address-line-2-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="city">
+            City
+          </label>
+          <input class="govuk-input govuk-input" id="city" name="city" type="text" aria-describedby="city-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input govuk-!-width-one-third" id="postcode" name="postcode" type="text" aria-describedby="postcode-hint">
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+            <legend class="govuk-fieldset__legend">
+              Date of birth
+            </legend>
+            <div class="govuk-date-input" id="dob">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="distinguishing-features">
+            Distinguishing features
+          </label>
+          <div id="distinguishing-features-hint" class="govuk-hint">
+            Here you can write about any distinguishing features that would help people to identify you in an emergency. This could be a birthmark or a scar for example. If you don’t have any distinguishing features then you don’t have to write something here.
+          </div>
+          <textarea class="govuk-textarea" id="distinguishing-features" name="distinguishing-features" rows="5"></textarea>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+      <p>
+        <a href="ad-task-list-2">Save and continue later</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
