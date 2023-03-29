@@ -1,0 +1,65 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  To avoid any doubt – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">To avoid any doubt</h1>
+
+      <p>
+        On this page you will find some statements that will be included in your Advance Decision if you tick them. The first one is a legal requirement so you have to tick it, the others are optional.
+      </p>
+
+      <form action="next-steps" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="avoid-any-doubt" name="avoid-any-doubt" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="avoid-any-doubt">
+                  I confirm that the refusals of treatment in this Advance Decision are to apply even if my life is at risk or may be shortened as a result.
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The Mental Capacity Act says that if an Advance Decision includes a refusal of life-sustaining treatment then it must include a statement to confirm that the Advance Decision applies even if it puts your life at risk. You must therefore tick this box to confirm that you want your Advance Decision to apply even if your life is at risk as a result. This statement will appear in your completed Advance Decision.
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="avoid-any-doubt-2" name="avoid-any-doubt" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="avoid-any-doubt-2">
+                  I wish to be given all medical treatment to alleviate pain or distress, or aimed at ensuring my comfort.
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Whatever treatment you refuse in your Advance Decision, your healthcare team will still do everything they can to keep you comfortable and free from pain. However, ticking this box gives you the opportunity to clearly state that you would like all available treatment to alleviate pain and discomfort. You don’t have to tick this box if you don’t want to, but if you do then this statement will appear in your completed Advance Decision.                </div>
+                </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="avoid-any-doubt-3" name="avoid-any-doubt" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="avoid-any-doubt-3">
+                  If I am pregnant, I wish to receive medical treatment or procedures leading to the safe delivery of my child. Once my child is safely delivered I wish to reinstate my wishes as set out in this document.
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  You should tick this box if you do not want your refusals of treatment to apply during pregnancy. By ticking this box, you are consenting to all treatments necessary to ensure your child is safely delivered. As soon as your child is delivered, your refusals of treatment will come into effect again. You don’t have to tick this box if you don’t want to, but if you do then this statement will appear in your completed Advance Decision.                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+      <p>
+        <a href="ad-task-list-5">Save and continue later</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

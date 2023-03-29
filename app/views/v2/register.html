@@ -1,0 +1,81 @@
+{% extends "layout_cid_logged_out.html" %}
+
+{% block pageTitle %}
+  Create an account – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Create an account</h1>
+
+      <p>
+        You need to enter your email address and create a password. This is so that you can save your forms and return to them at a later date.
+      </p>
+      <div class="govuk-inset-text">
+        You can create an account in your name to help someone else make an Advance Decision or Advance Statement. You can also use one account if you share an email address with your partner. But if you do this all of the information, statements and decisions in it must be their own.
+      </div>
+      <p>
+        If you already have an account, please <a href="login">login</a>.
+      </p>
+
+      <form action="registered" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="email-address">
+            Email Address
+          </label>
+          <input class="govuk-input govuk-input" id="email-address" name="email-address" type="text" aria-describedby="email-address-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="password">
+            Password
+          </label>
+          <input class="govuk-input govuk-input" id="password" name="password" type="password" aria-describedby="password-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="retype-password">
+            Retype Password
+          </label>
+          <input class="govuk-input govuk-input" id="retype-password" name="retype-password" type="password" aria-describedby="retype-password-hint">
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="future-contact-hint">
+            <legend class="govuk-fieldset__legend">
+              Can we contact you in the future with updates on our work?
+            </legend>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="future-contact" name="future-contact" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="future-contact">
+                  Yes
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="t-and-c-hint">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="t-and-c" name="t-and-c" type="checkbox" value="tcsaccepted">
+                <label class="govuk-label govuk-checkboxes__label" for="t-and-c">
+                  I agree to the terms and conditions and privacy policy (tick to confirm)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Create account
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

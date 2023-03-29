@@ -127,7 +127,7 @@ a:visited {
 
 // Override heading fonts to use Souvenir
 
-.govuk-heading-xl, .govuk-heading-l {
+.govuk-heading-xl, .govuk-heading-l, .govuk-fieldset__legend {
     font-family: "SouvenirStd-Light", "Georgia";
     color: #00403a;
   }
@@ -146,9 +146,9 @@ a:visited {
     color: #00403a;
 }
 
-// Override default body and paragraph colours
+// Override default body, paragraph and list item colours
 
-p, .govuk-body, .govuk-body-m {
+p, li, .govuk-body, .govuk-body-m {
     color: #00403a;
 }
 
