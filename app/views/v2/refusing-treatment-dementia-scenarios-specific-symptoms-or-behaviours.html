@@ -1,0 +1,79 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+I refuse all life-sustaining treatment if I have dementia but also show any of the following symptoms or behaviours
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v2/refusing-treatment-terminal-illness" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              I refuse all life-sustaining treatment if I have dementia but also show any of the following symptoms or behaviours (select all that apply):
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="unaware-of-surroundings" name="refuse-dementia-with-symptoms" type="checkbox" value="unaware-of-surroundings">
+              <label class="govuk-label govuk-checkboxes__label" for="unaware-of-surroundings">
+                I am persistently unaware of my surroundings
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="unable-to-recognise-people-close-to-me" name="refuse-dementia-with-symptoms" type="checkbox" value="unable-to-recognise-people-close-to-me">
+              <label class="govuk-label govuk-checkboxes__label" for="unable-to-recognise-people-close-to-me">
+                I am persistently unable to recognise people close to me
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="anxious-or-agitated" name="refuse-dementia-with-symptoms" type="checkbox" value="anxious-or-agitated">
+              <label class="govuk-label govuk-checkboxes__label" for="anxious-or-agitated">
+                I am persistently anxious or agitated
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="unable-to-attend-to-my-personal-hygiene" name="refuse-dementia-with-symptoms" type="checkbox" value="unable-to-attend-to-my-personal-hygiene">
+              <label class="govuk-label govuk-checkboxes__label" for="unable-to-attend-to-my-personal-hygiene">
+                I am unable to attend to my personal hygiene
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="unable-to-swallow" name="refuse-dementia-with-symptoms" type="checkbox" value="unable-to-swallow">
+              <label class="govuk-label govuk-checkboxes__label" for="unable-to-swallow">
+                I am unable to swallow
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="unable-to-interact-with-others" name="refuse-dementia-with-symptoms" type="checkbox" value="unable-to-interact-with-others">
+              <label class="govuk-label govuk-checkboxes__label" for="unable-to-interact-with-others">
+                I am unable to interact with others
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="other-symptoms" name="refuse-dementia-with-symptoms" type="checkbox" value="other-symptoms">
+              <label class="govuk-label govuk-checkboxes__label" for="other-symptoms">
+                Other symptoms or behaviours as specified below
+              </label>
+            </div>
+            <div class="govuk-form-group">
+              <textarea class="govuk-textarea" id="other-symptoms-details" name="other-symptoms" rows="5"></textarea>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
