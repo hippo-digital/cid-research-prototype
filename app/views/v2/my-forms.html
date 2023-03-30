@@ -2,7 +2,7 @@
 {% extends "layout_cid.html" %}
 
 {% block pageTitle %}
-  My forms – {{ serviceName }}
+  My account – {{ serviceName }}
 {% endblock %}
 
 {% block content %}
@@ -10,11 +10,16 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        My forms
+        My account
       </h1>
-      <p>
-        On this page you’ll find your forms. You can start a new Advance Decision or Advance Statement, view or edit a completed form, or continue one you have already started.
-      </p>
+
+      <p class="govuk-body">Within your account you can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>create a new advance decision</li>
+          <li>create a new advance statement</li>
+          <li>view or edit a completed form</li>
+          <li>continue an existing form which isn't complete</li>
+        </ul>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -24,32 +29,32 @@
         </summary>
         <div class="govuk-details__text">
           <p>
-            An Advance Decision to Refuse Treatment allows you to record any medical treatments that you do not want to be given in the future, in case you later become unable to make or communicate decisions for yourself. It can only be used if you cannot make or communicate a decision for yourself. It is commonly shortened to Advance Decision, and was previously known as a Living Will.
+            An advance decision (sometimes referred to as a living will) allows you to record  medical treatments that you do not want to be given in future. Advance decisions are legally binding in England, Wales and Northern Ireland. They are not legally binding in Scotland but should be taken into account by doctors.
           </p>
 
           <p>
-            Advance Decisions are legally binding in England and Wales, as long as they meet certain requirements. This means that if a healthcare professional knows you have made an Advance Decision, they have to follow it. If they ignore an Advance Decision and provide treatment that you have refused then they could be taken to court.
+            An advance decision will come into effect should you become unable to make or communicate decisions for yourself. If a healthcare professional knows you have made an advance decision, they have to follow it. If ignored and treatment is provided which you have refused, then they could be taken to court.
           </p>
 
           <p>
-            You can use an Advance Decision to refuse any treatment, including life-sustaining treatment such as resuscitation, artificial nutrition and hydration, or breathing machines.
+            You can use an advance decision to refuse any treatment, including life-sustaining treatment such as resuscitation, artificial nutrition and hydration, or breathing machines.
           </p>
 
           <p>
-            You cannot use an Advance Decision to:
+            An advance decision does not include:
           </p>
           <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
             <li>
-              request or demand particular treatments
+              requests or demands for particular treatments
             </li>
             <li>
-              ask for anything illegal, such as assistance to end your life
+              anything illegal such as assistance to end your life
             </li>
             <li>
-              refuse basic care that keeps you clean and comfortable
+              refusal of basic care that keeps you clean and comfortable
             </li>
             <li>
-              appoint someone to make decisions on your behalf (choosing another person to make decisions about your health and care is done by making a Lasting Power of Attorney for Health and Welfare).
+              appointment of someone to make decisions on your behalf
             </li>
           </ul>
 
@@ -64,8 +69,8 @@
         </summary>
         <div class="govuk-details__text">
           <p>
-          An Advance Statement allows you to record your wishes, feelings, beliefs and values. You can include anything that is important to you in relation to your health and wellbeing, for example your food preferences, religious or spiritual views, your daily routine, where you would like to be cared for (for instance, at home, in a hospice, in hospital or in a residential home). It is also helpful to include information about the things that are important to your quality of life, for example hobbies, pastimes or spending time with your family.
-        </p>
+            An Advance Statement allows you to record your wishes, feelings, beliefs and values. You can include anything that is important to you in relation to your health and wellbeing, for example your food preferences, religious or spiritual views, your daily routine, where you would like to be cared for. It is also helpful to include information about the things that are important to your quality of life, for example hobbies, pastimes or spending time with your family.
+          </p>
         
         <p>
           You can also use it to name anyone you would like to be consulted when decisions are being made on your behalf. However, this does not mean that a healthcare professional has to follow what that person says. The only way to give another person the legal power to make health or care decisions on your behalf is by making a Lasting Power of Attorney for Health and Welfare.
@@ -99,14 +104,6 @@
 
         </div>
       </details>
-
-      <p>
-        Once you’ve started there is detailed guidance throughout. You can access this by clicking on any links, <a href="#">like this</a> or the ones above.
-      </p>
-
-      <p>
-        At any point you can save your progress and come back to it later.
-      </p>
 
       <p>
         <a href="ad-task-list-1" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">

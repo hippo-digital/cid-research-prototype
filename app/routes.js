@@ -15,7 +15,7 @@ router.post('/v2/refusing-treatment-dementia-scenarios', function (req, res) {
       res.redirect('/v2/refusing-treatment-dementia-scenarios')
     } else {
       // Send user to next page, skipping refusal options
-      res.redirect('/v2/refusing-treatment-terminal-illness')
+      res.redirect('/v2/my-values')
     }
   
   })
@@ -32,7 +32,7 @@ router.post('/v2/refusing-treatment-dementia-scenarios-specific-symptoms-or-beha
         res.redirect('/v2/refusing-treatment-dementia-scenarios-specific-symptoms-or-behaviours')
       } else {
       // Send user to next page, skipping refusal options
-      res.redirect('/v2/refusing-treatment-terminal-illness')
+      res.redirect('/v2/my-values')
     }
   
   })
@@ -49,7 +49,7 @@ router.post('/v2/refusing-treatment-terminal-illness', function (req, res) {
       res.redirect('/v2/refusing-treatment-brain-injury-scenarios')
     } else {
       // Send user to next page, skipping refusal options
-      res.redirect('/v2/refusing-treatment-terminal-illness')
+      res.redirect('/v2/my-values')
     }
   
   })
@@ -66,7 +66,7 @@ router.post('/v2/refusing-treatment-terminal-illness-routing', function (req, re
         res.redirect('/v2/refusing-treatment-brain-injury-scenarios-specific-symptoms-or-behaviours')
       } else {
       // Send user to next page, skipping refusal options
-      res.redirect('/v2/refusing-treatment-terminal-illness')
+      res.redirect('/v2/my-values')
     }
   
   })
