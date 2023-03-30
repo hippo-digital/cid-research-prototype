@@ -127,15 +127,15 @@ a:visited {
 
 // Override heading fonts to use Souvenir
 
-.govuk-heading-xl, .govuk-heading-l, .govuk-fieldset__legend {
+.govuk-heading-xl {
     font-family: "SouvenirStd-Light", "Georgia";
     color: #00403a;
   }
 
-.govuk-heading-m, .govuk-heading-s {
-    font-family: "SouvenirGreek-Light", "Georgia";
-    color: #00403a;
-  }
+.govuk-heading-l, .govuk-fieldset__legend, .app-task-list__section, .govuk-heading-m, .govuk-heading-s, .govuk-label--l {
+font-family: "geograph", "Arial";
+color: #00403a;
+}
 
 .govuk-panel__title {
 	font-family: "SouvenirGreek-Light", "Georgia";
