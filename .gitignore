@@ -1,22 +1,83 @@
-# ignore tracking usage data config - we want a different one for each user
-usage-data-config.json
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/public
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+.port.tmp
+.tmuxp.*
+
+# node-waf configuration
+.lock-wscript
+
 # ignore extension SCSS because it's dynamically generated
 lib/extensions/_extensions.scss
+
 # ignore any release archives
 /govuk-prototype-kit*.zip
-.env
-.sass-cache
-.DS_Store
-.start.pid
-.port.tmp
-public
-node_modules/
-.tmuxp.*
+
+# IDEs and editors
 .idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+.sass-cache
+connect.lock
+typings
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# ignore tracking usage data config - we want a different one for each user
+usage-data-config.json
+
+# ignore cypress
 /cypress-test
 /cypress/videos
 /cypress/screenshots
 /cypress/downloads
 /cypress/support
 /cypress/temp
-tmp/
