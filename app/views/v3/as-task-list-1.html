@@ -1,0 +1,116 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  Create Advance Statement – {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Create Advance Statement
+      </h1>
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Advance Statement incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 4 sections.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Personal details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="about-me">
+                  About me
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="about-me">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> My wishes
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Likes and dislikes
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="likes-and-dislikes">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Beliefs and traditions
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="beliefs-and-traditions">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Diet and daily routine
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="diet-and-daily-routine">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Care and treatment
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="care-and-treatment">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Wishes for after I die
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="wishes-for-after-i-die">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Other wishes
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="other-wishes">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> My health
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                My health
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="my-health">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> Review
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Next steps
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="next-steps">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Finish
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="finish-as">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

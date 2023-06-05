@@ -1,0 +1,49 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+My values – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">My values</h1>
+
+      <p>
+        You don’t have to write something here, but if you do it will help your healthcare team to understand your wishes properly. It will also help them to feel confident that you understand and have considered the decisions you are making.
+      </p>
+
+      <p>
+        Importantly, if you lost capacity and a situation arose that wasn’t covered in your Advance Decision, the information you write here can help your healthcare team to decide how you would want to be treated.
+      </p>
+
+      <form action="my-health" method="post" novalidate>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="my-values-because">
+              I’m making this Advance Decision because…
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            In this box you can write about why you are making this Advance Decision. For example, you may have seen someone close to you given treatment that you yourself would not want, or there may be a particular situation that you would like to avoid.
+          </div>
+          <textarea class="govuk-textarea" id="my-values-because" name="my-values-because" rows="5" aria-describedby="my-values-because-hint"></textarea>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+      <p>
+        <a href="ad-task-list-4">Save and continue later</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

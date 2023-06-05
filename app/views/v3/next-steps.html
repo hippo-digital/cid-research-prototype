@@ -1,0 +1,171 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+Next steps – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Next steps
+      </h1>
+
+      <p>
+        You need to do the following things before your Advance Decision is complete and can be used...
+      </p>
+
+      <h2 class="govuk-heading-l">
+        1. Print it
+      </h2>
+
+      <p>
+        Once you’ve completed each section of the form you can download your Advance Decision document. Read it carefully and check you’re happy with it.
+      </p>
+
+      <p>
+        <a href="#" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+          Download
+        </a>
+      </p>
+
+      <p>
+        Most computers will open the document automatically when you click on the link above.
+      </p>
+
+      <p>
+        If the document doesn’t open automatically, you may need a PDF reader like <a href="https://www.adobe.com/uk/acrobat/pdf-reader.html" target="_blank">Adobe Reader (opens in new window)</a> to view and print it.
+      </p>
+
+      <h2 class="govuk-heading-l">
+        2. Sign and witness it
+      </h2>
+
+      <p>
+        An advance decision may only be considered valid if it's signed by you and by a witness if you want to refuse life-sustaining treatment. It's recommended you still do this if you haven't refused life-sustaining treatment.
+      </p>
+
+      <p>
+        If you are unable to sign the form someone else can sign it on your behalf in your presence.
+      </p>
+
+      <p class="govuk-body">If someone signs on your behalf, this person:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>should write a statement next to the signature explaining that you have directed them to sign on your behalf</li>
+          <li>cannot witness your advance decision</li>
+        </ul>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Who can witness your advance decision
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+  
+            <p>
+              Anyone over the age of 18, for example a friend, neighbour or colleague.
+            </p>
+
+            <p class="govuk-body">To avoid someone questioning if you made your advance decision under pressure, we suggest that your witness is not:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>a close relative</li>
+                <li>partner</li>
+                <li>anyone who will inherit your money or property after your death</li>
+                <li>an attorney who might have supported you with a lasting power of attorney</li>
+              </ul>
+
+            <p>
+              Your witness will need to watch you sign your advance decision, and be sure that your signature confirms the wishes you have written.
+            </p>
+
+            <p>
+              They should then sign and write their name, address and relationship to you. The witness is not confirming that you have capacity to make the decisions in the form.
+            </p>
+  
+          </div>
+        </details>
+
+      <p>
+        After printing your form, you should fill in the details of the people you have discussed your Advance Decision with - you should do this in the section titled relevant people (the idea is that you fill in this section after you have completed your forms to show who you have discussed them with or who has a copy).
+      </p>
+
+      <h2 class="govuk-heading-l">
+        3. Share it
+      </h2>
+
+      <p>
+        It’s really important that people know about your Advance Decision.
+      </p>
+
+      <p>
+        You should give a copy to your GP, to anyone else involved in your care and to people close to you (like family or friends).
+      </p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            About making sure people know your wishes
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <p>
+            It is important that you tell people you have made an Advance Decision. If your healthcare team does not know that you have one, they will not know how you wish to be treated and will not be able to follow the instructions in your Advance Decision.
+          </p>
+
+          <p>
+            There are several things that you can do to make sure people are aware of your Advance Decision:
+          </p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>
+              Ask your GP to keep a copy of your Advance Decision with your medical records.
+            </li>
+            <li>
+              If you live in England, ask your GP to add the fact that you have an Advance Decision to your Summary Care Record. A Summary Care Record is an electronic record of important information about your health that is accessible to any healthcare professional 24 hours a day.
+            </li>
+            <li>
+              Give a copy of your Advance Decision to anyone who is regularly involved in your care. This could be, for example, a consultant, district nurse or social worker.
+            </li>
+            <li>
+              Give a copy of your Advance Decision to your friends and family members.
+            </li>
+            <li>
+              You can order a wallet-sized Notice of Advance Decision card from Compassion in Dying, which you can keep on your person in case of emergency.
+            </li>
+            <li>
+              Speak to your GP about what local arrangements are available to record your wishes. For example, some Ambulance Trusts will hold copies of people’s Advance Decisions if they are near the end of life.
+            </li>
+            <li>
+              Order a free ‘bottle’ from Lions Clubs International to keep a copy of your Advance Decision in the fridge. Paramedics should know to look for the Lions symbol when entering someone’s house and to check the fridge for the container. To order call 0845 833 9502.
+            </li>
+          </ul>
+
+        </div>
+      </details>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Remember, your Advance Decision is not legally binding until you print it, sign it and get it witnessed
+        </strong>
+      </div>
+
+      <p>
+        <a href="finish" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+          Finish
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

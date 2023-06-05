@@ -1,0 +1,136 @@
+{% extends "layout_cid.html" %}
+
+{% block pageTitle %}
+  Create Advance Decision – {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Create Advance Decision
+      </h1>
+
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Advance Decision incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 5 sections.</p>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Personal details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="about-me" aria-describedby="about-me-status">
+                  About me
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="about-me-status">Not started</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Refusing treatment
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Refusing treatment
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-1-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Dementia
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-1-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Brain injury
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-2-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Diseases of the central nervous system
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-3-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Terminal illness
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-4-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Other scenarios
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-5-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                To avoid doubt
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="refusing-treatment-6-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Why I am making this Advance decision
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                My values
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="my-values-1-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">4. </span> My health
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                My health
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="my-health-1-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">5. </span> Review
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Next steps
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="review-1-status">Cannot start yet</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                Finish
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="review-2-status">Cannot start yet</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}
