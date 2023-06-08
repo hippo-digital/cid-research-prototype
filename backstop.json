@@ -1,0 +1,261 @@
+{
+  "id": "cid-prototype",
+  "viewports": [
+    {
+      "label": "ipad",
+      "width": 1180,
+      "height": 820
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "CID - start",
+      "url": "http://localhost:3000/v3/index"
+    },
+    {
+      "label": "CID - avoid-doubt-legal",
+      "url": "http://localhost:3000/v3/avoid-doubt-legal"
+    },
+    {
+      "label": "CID - avoid-doubt-pain",
+      "url": "http://localhost:3000/v3/avoid-doubt-pain"
+    },
+    {
+      "label": "CID - check-details-1",
+      "url": "http://localhost:3000/v3/check-details-1"
+    },
+    {
+      "label": "CID - check-details-2",
+      "url": "http://localhost:3000/v3/check-details-2"
+    },
+    {
+      "label": "CID - confirmation",
+      "url": "http://localhost:3000/v3/confirmation"
+    },{
+      "label": "CID - dashboard",
+      "url": "http://localhost:3000/v3/dashboard"
+    },
+    {
+      "label": "CID - healthcare-attorney-add",
+      "url": "http://localhost:3000/v3/healthcare-attorney-add"
+    },
+    {
+      "label": "CID - healthcare-attorney-list",
+      "url": "http://localhost:3000/v3/healthcare-attorney-list"
+    },
+    {
+      "label": "CID - healthcare-chi-no",
+      "url": "http://localhost:3000/v3/healthcare-chi-no"
+    },
+    {
+      "label": "CID - healthcare-do-you-know-chi-no",
+      "url": "http://localhost:3000/v3/healthcare-do-you-know-chi-no"
+    },
+    {
+      "label": "CID - healthcare-do-you-know-nhs-no",
+      "url": "http://localhost:3000/v3/healthcare-do-you-know-nhs-no"
+    },
+    {
+      "label": "CID - healthcare-gp-surgery",
+      "url": "http://localhost:3000/v3/healthcare-gp-surgery"
+    },
+    {
+      "label": "CID - healthcare-lpa",
+      "url": "http://localhost:3000/v3/healthcare-lpa"
+    },
+    {
+      "label": "CID - healthcare-nhs-no",
+      "url": "http://localhost:3000/v3/healthcare-nhs-no"
+    },
+    {
+      "label": "CID - personal-address",
+      "url": "http://localhost:3000/v3/personal-address"
+    },
+    {
+      "label": "CID - personal-country",
+      "url": "http://localhost:3000/v3/personal-country"
+    },
+    {
+      "label": "CID - personal-country-scotland",
+      "url": "http://localhost:3000/v3/personal-country-scotland"
+    },
+    {
+      "label": "CID - personal-dob",
+      "url": "http://localhost:3000/v3/personal-dob"
+    },
+    {
+      "label": "CID - personal-features",
+      "url": "http://localhost:3000/v3/personal-features"
+    },
+    {
+      "label": "CID - personal-name",
+      "url": "http://localhost:3000/v3/personal-name"
+    },
+    {
+      "label": "CID - refuse-brain-injury",
+      "url": "http://localhost:3000/v3/refuse-brain-injury"
+    },
+    {
+      "label": "CID - refuse-central-nervous",
+      "url": "http://localhost:3000/v3/refuse-central-nervous"
+    },
+    {
+      "label": "CID - refuse-dementia",
+      "url": "http://localhost:3000/v3/refuse-dementia"
+    },
+    {
+      "label": "CID - refuse-other",
+      "url": "http://localhost:3000/v3/refuse-other"
+    },
+    {
+      "label": "CID - refuse-start",
+      "url": "http://localhost:3000/v3/refuse-start"
+    },
+    {
+      "label": "CID - refuse-terminal-illness",
+      "url": "http://localhost:3000/v3/refuse-terminal-illness"
+    },
+    {
+      "label": "CID - refuse-understanding",
+      "url": "http://localhost:3000/v3/refuse-understanding"
+    },
+    {
+      "label": "CID - refuse-start",
+      "url": "http://localhost:3000/v3/refuse-start"
+    },
+    {
+      "label": "CID - refuse-start",
+      "url": "http://localhost:3000/v3/your-values-why-refuse"
+    },
+    {
+      "label": "CID - statement-care-caring",
+      "url": "http://localhost:3000/v3/statement/care-caring"
+    },
+    {
+      "label": "CID - statement-care-food",
+      "url": "http://localhost:3000/v3/statement/care-food"
+    },
+    {
+      "label": "CID - statement-care-where",
+      "url": "http://localhost:3000/v3/statement/care-where"
+    },
+    {
+      "label": "CID - statement-check-details-1",
+      "url": "http://localhost:3000/v3/statement/check-details-1"
+    },
+    {
+      "label": "CID - statement-check-details-2",
+      "url": "http://localhost:3000/v3/statement/check-details-2"
+    },
+    {
+      "label": "CID - statement-confirmation",
+      "url": "http://localhost:3000/v3/statement/confirmation"
+    },
+    {
+      "label": "CID - statement-healthcare-attorney-add",
+      "url": "http://localhost:3000/v3/statement/healthcare-attorney-add"
+    },
+    {
+      "label": "CID - statement-healthcare-attorney-list",
+      "url": "http://localhost:3000/v3/statement/healthcare-attorney-list"
+    },
+    {
+      "label": "CID - statement-healthcare-chi-no",
+      "url": "http://localhost:3000/v3/statement/healthcare-chi-no"
+    },
+    {
+      "label": "CID - statement-healthcare-do-you-know-chi-no",
+      "url": "http://localhost:3000/v3/statement/healthcare-do-you-know-chi-no"
+    },
+    {
+      "label": "CID - statement-healthcare-do-you-know-nhs-no",
+      "url": "http://localhost:3000/v3/statement/healthcare-do-you-know-nhs-no"
+    },
+    {
+      "label": "CID - statement-healthcare-gp-surgery",
+      "url": "http://localhost:3000/v3/statement/healthcare-gp-surgery"
+    },
+    {
+      "label": "CID - statement-healthcare-lpa",
+      "url": "http://localhost:3000/v3/statement/healthcare-lpa"
+    },
+    {
+      "label": "CID - statement-healthcare-nhs-no",
+      "url": "http://localhost:3000/v3/statement/healthcare-nhs-no"
+    },
+    {
+      "label": "CID - statement-personal-address",
+      "url": "http://localhost:3000/v3/statement/personal-address"
+    },
+    {
+      "label": "CID - statement-personal-country",
+      "url": "http://localhost:3000/v3/statement/personal-country"
+    },
+    {
+      "label": "CID - statement-personal-country-scotland",
+      "url": "http://localhost:3000/v3/statement/personal-country-scotland"
+    },
+    {
+      "label": "CID - statement-personal-dob",
+      "url": "http://localhost:3000/v3/statement/personal-dob"
+    },
+    {
+      "label": "CID - statement-personal-features",
+      "url": "http://localhost:3000/v3/statement/personal-features"
+    },
+    {
+      "label": "CID - statement-personal-name",
+      "url": "http://localhost:3000/v3/statement/personal-name"
+    },
+    {
+      "label": "CID - statement-treatment-conditions",
+      "url": "http://localhost:3000/v3/statement/treatment-conditions"
+    },
+    {
+      "label": "CID - statement-treatment-health",
+      "url": "http://localhost:3000/v3/statement/treatment-health"
+    },
+    {
+      "label": "CID - statement-treatment-preference",
+      "url": "http://localhost:3000/v3/statement/treatment-preference"
+    },
+    {
+      "label": "CID - statement-values-dislike",
+      "url": "http://localhost:3000/v3/statement/values-dislike"
+    },
+    {
+      "label": "CID - statement-values-identity",
+      "url": "http://localhost:3000/v3/statement/values-identity"
+    },
+    {
+      "label": "CID - statement-values-important",
+      "url": "http://localhost:3000/v3/statement/values-important"
+    },
+    {
+      "label": "CID - statement-values-religion",
+      "url": "http://localhost:3000/v3/statement/values-religion"
+    },
+    {
+      "label": "CID - statement-values-start",
+      "url": "http://localhost:3000/v3/statement/values-start"
+    }
+ ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
