@@ -80,7 +80,7 @@ router.get('/v3/healthcare-gp-surgery', function (req, res) {
   res.locals.prevURL = req.get('Referrer')
   prevURL = res.locals.prevURL
 
-  return res.render('v3/statement/healthcare-gp-surgery', {
+  return res.render('v3/healthcare-gp-surgery', {
     'prevURL': prevURL
   })
 })
@@ -121,7 +121,7 @@ router.get('/v3/healthcare-attorney-add', function (req, res) {
   req.session.data['amend-attorney'] = ''
 
   // send back the variables to the page
-  return res.render('v3/statement/healthcare-attorney-add', {
+  return res.render('v3/healthcare-attorney-add', {
     'prevURL': prevURL,
     'item': item,
     'attorneyName': attorneyName,
@@ -166,7 +166,7 @@ router.get('/v3/healthcare-attorney-list', function (req, res) {
   res.locals.prevURL = req.get('Referrer')
   prevURL = res.locals.prevURL
 
-  return res.render('v3/statement/healthcare-attorney-list', {
+  return res.render('v3/healthcare-attorney-list', {
     'prevURL': prevURL
   })
 })
@@ -203,7 +203,7 @@ router.get('/v3/check-details-1', function (req, res) {
   res.locals.prevURL = req.get('Referrer')
   prevURL = res.locals.prevURL
 
-  return res.render('v3/statement/check-details-1', {
+  return res.render('v3/check-details-1', {
     'prevURL': prevURL
   })
 })
@@ -369,7 +369,7 @@ router.post('/v3/statement/healthcare-attorney-list-post', function (req, res) {
   let addattorney = req.session.data['add-attorney']
 
   // routing based on the answer
-  if (addattorney == "yes"){
+  if (addattorney === "yes"){
     res.redirect('/v3/statement/healthcare-attorney-add')
   } else {
     res.redirect('/v3/statement/check-details-1')
