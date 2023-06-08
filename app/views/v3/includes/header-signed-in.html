@@ -1,0 +1,52 @@
+<header class="govuk-header " data-module="govuk-header" role="banner">
+  <div class="govuk-header__container govuk-width-container">
+
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype">
+            <a href="/v3/index" id="logo-cid"><image src="{{ asset_path }}/images/CiD_Logo_on_dark.png" alt="Compassion in Dying logo" width="140" height="70"></image></a>
+          </span>
+        </a>
+      </div>
+
+    <div class="govuk-header__content">
+
+
+      <a class="govuk-header__link govuk-header__service-name" href="/v3/">
+        {{ serviceName or 'Make a living will' }}
+      </a>
+
+      <nav aria-label="Menu" class="govuk-header__navigation ">
+        <button aria-controls="navigation" aria-label="Show or hide menu" class="govuk-header__menu-button govuk-js-header-toggle"
+                hidden="" type="button">Menu
+        </button>
+
+        <ul class="govuk-header__navigation-list" id="navigation">
+
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/v3/index">Home</a>
+          </li>
+
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/v3/dashboard">Your forms</a>
+          </li>
+
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/v3/help-and-support">Help and support</a>
+          </li>
+
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/v3/account/manage">Account settings</a>
+          </li>
+
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/v3/index">Sign out</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+</header>

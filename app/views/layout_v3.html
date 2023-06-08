@@ -14,7 +14,11 @@
 {% endblock %}
 
 {% block header %}
-  {% include 'v3/includes/header-signed-out.html' %}
+  {% if signedin === 'true' %}
+    {% include 'v3/includes/header-signed-in.html' %}
+  {% else %}
+    {% include 'v3/includes/header-signed-out.html' %}
+  {% endif %}
 {% endblock %}
 
 
