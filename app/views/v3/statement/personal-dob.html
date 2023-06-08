@@ -1,0 +1,78 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% if data['change'] === 'true' %}
+  {% set action = '/v3/statement/check-details-1' %}
+{% elif data['change'] === 'final' %}
+  {% set action = '/v3/statement/check-details-2' %}
+{% endif %}
+
+{% block pageTitle %}
+What is your date of birth? - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal-address">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/personal-features' }}" method="post" class="form">
+
+        <p class="govuk-caption-l">Personal details</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your date of birth?
+              </h1>
+            </legend>
+
+            <div id="dob-hint" class="govuk-hint">For example, 15 3 1984</div>
+
+            <div class="govuk-date-input" id="dob">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="[date-of-birth]" type="text" autocomplete="bday-day" inputmode="numeric" value="{{ data['date-of-birth'][0] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="[date-of-birth]" type="text" autocomplete="bday-month" inputmode="numeric" value="{{ data['date-of-birth'][1] }}">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="dob-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="[date-of-birth]" type="text" autocomplete="bday-year" inputmode="numeric" value="{{ data['date-of-birth'][2] }}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

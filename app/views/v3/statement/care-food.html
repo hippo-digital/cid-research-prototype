@@ -1,0 +1,44 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+Do you have any food needs and preferences? – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="care-caring">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/care-where'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Your Care</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="care-food">
+              Do you have any food needs and preferences? (optional)
+            </label>
+          </h1>
+          <div id="care-food-hint" class="govuk-hint">For example, what should people know about your eating habits? Are you vegetarian, or vegan? Do you have any allergies, or are you restricted from eating any foods by your religion or faith? What are your favourite foods and drinks?</div>
+          <textarea class="govuk-textarea" id="care-food" name="care-food" rows="5" aria-describedby="care-food-hint">{{ data['care-food'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

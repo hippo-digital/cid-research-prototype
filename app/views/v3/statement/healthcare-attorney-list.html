@@ -1,0 +1,102 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+{% set NumAttorneys = data['attorneys'].length %}
+{% if NumAttorneys > 1 %}
+  {% set attorneyText = 'attorneys' %}
+{% endif %}
+
+{% block pageTitle %}
+Your attorneys - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-add' }}">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <p class="govuk-caption-l">Healthcare details</p>
+
+        <h1 class="govuk-heading-l govuk-!-padding-top-0">
+          Your attorneys
+        </h1>
+
+        <p>You have added {{ NumAttorneys }} {{ attorneyText or 'attorney' }}</p>
+
+        <form action="/v3/statement/healthcare-attorney-list-remove" method="POST" role="form">
+
+          {% if data['attorneys'].length %}
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+            {# loop through the array #}
+            {% for i in range(0, data['attorneys'].length) -%}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                {{ data['attorneys'][i][0] }}
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <a href="healthcare-attorney-add?item={{ i }}">Edit details</a> |
+                <button class="unstyle-button" name="remove" value="{{ i }}">Remove</button>
+              </dd>
+            </div>
+
+            {%- endfor %}
+
+
+
+          </dl>
+
+          {% else %}
+
+          {# if all values can be removed, you'll need a placeholder when the array is empty #}
+          <p class="govuk-body">No attorneys added yet</p>
+
+          {% endif %}
+
+        </form>
+
+      <form action="/v3/statement/healthcare-attorney-list-post" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Do you need to add another attorney?
+            </legend>
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-attorney-yes" name="add-attorney" type="radio" value="yes" >
+                <label class="govuk-label govuk-radios__label" for="add-attorney-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="add-attorney-no" name="add-attorney" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="add-attorney-no">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

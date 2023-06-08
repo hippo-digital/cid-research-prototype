@@ -1,0 +1,84 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+About your advance statement – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="check-details-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">About your advance statement</h1>
+
+        <p class="govuk-body">An advance statement allows you to explain what is important to you and how you want to be cared for.</p>
+
+        <p class="govuk-body">It can be a very useful document for your relatives, nurses and doctors as it lets them know how you want to be cared for if you lack mental capacity to make a decision about your health or care.</p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span
+              class="govuk-details__summary-text">What is mental capacity?</span></summary>
+          <div class="govuk-details__text"><p class="govuk-body">Mental capacity is the ability to make and communicate
+            a decision for yourself.</p>
+            <p class="govuk-body">While you have mental capacity you have the right to make decisions about your medical
+              treatment and care. You can choose to refuse or consent to treatment.</p>
+            <p class="govuk-body">Your advance decision can only be used if you do not have mental capacity to make or
+              communicate a decision for yourself.</p>
+            <p class="govuk-body">The law in England and Wales says that someone’s mental capacity should be assumed,
+              unless there is reason to question it. For example, if they have had a brain injury or a diagnosis of
+              dementia.</p>
+            <p class="govuk-body">You must be able to do all four of these things to have mental capacity to make a
+              decision:</p>
+            <ol class="govuk-list govuk-list--number">
+              <li>Understand the information</li>
+              <li>Retain the information long enough to make a decision</li>
+              <li>Weigh up the information against other factors</li>
+              <li>Communicate the decision once you have made it</li>
+            </ol>
+            <p class="govuk-body">Mental capacity is decision specific. This means that someone may have the mental
+              capacity to make some decisions but not others. For example, someone with advanced dementia may have the
+              mental
+              capacity to decide what they want to eat that day, but not to make a decision about refusing CPR.</p>
+            <p class="govuk-body">In Scotland and Northern Ireland the principle of mental capacity is similar, but they
+              have their own definitions. The Office of the Public Guardian in Scotland has a <a class="govuk-link"
+                                                                                                 href="https://www.publicguardian-scotland.gov.uk/adults-with-incapacity-(scotland)-act/definition-of-incapacity"
+                                                                                                 target="_blank">helpful
+                definition of
+                incapacity</a> on their website. The Department of Health NI define mental capacity in their <a
+                  class="govuk-link" href="https://www.health-ni.gov.uk/mca-codes-practice" target="_blank">Code of
+                Practice (PDF, 2.8MB)</a>.</p>
+          </div>
+        </details>
+
+      <div class="govuk-inset-text">
+
+        <p class="govuk-body">The following questions will ask about things like:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>where you want to be cared for</li>
+          <li>your daily routine</li>
+          <li>your religious beliefs and how these affect your care</li>
+          <li>anything you do not want to happen to you</li>
+        </ul>
+
+      </div>
+
+      <p class="govuk-body">We'll use your answers to make an advance statement that you can save, print, and sign.</p>
+
+      <div class="govuk-button-group">
+        <a href="values-important" class="govuk-button">Continue</a>
+        <a class="govuk-link" href="#">Save as draft</a>
+      </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

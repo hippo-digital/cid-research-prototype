@@ -1,0 +1,45 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+Understanding how advance decisions work in Scotland - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal-country">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div aria-labelledby="govuk-notification-banner-title" class="govuk-notification-banner" data-module="govuk-notification-banner"
+           role="region">
+        <div class="govuk-notification-banner__content"><h1 class="govuk-heading-xl">Understanding how advance decisions
+          work in Scotland</h1>
+          <p class="govuk-body">In Scotland, the legal name is advance directive.</p>
+          <p class="govuk-body">An advance directive is not legally binding but should be taken into account by
+            doctors.</p>
+          <p class="govuk-body">This service meets the requirements needed for an advance directive in Scotland.</p>
+          <a href="personal-address" class="govuk-button">Continue</a>
+        </div>
+      </div>
+
+      <section>
+        <h2 class="govuk-heading-m">Get help with your form</h2>
+        <p class="govuk-body-s">Contact us if you need help with this service or support filling in your form.</p><b
+            class="govuk-body-s govuk-!-font-weight-bold">Telephone</b>
+        <p class="govuk-body-s">Our specialist nurse-led team is available to help on the phone.</p>
+        <p class="govuk-body-s">Telephone: 0800 999 2434<br>Monday to Friday, 11am to 3pm</p>
+        <p class="govuk-body-s"><b class="govuk-body-s govuk-!-font-weight-bold">Email</b> <br>
+          <a class="govuk-link" href="mailto:info@compassionindying.org.uk" target="_blank">info@compassionindying.org.uk</a><br>
+          We aim to respond within 2 working days</p>
+      </section>
+
+
+    </div>
+  </div>
+
+{% endblock %}

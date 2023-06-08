@@ -1,0 +1,105 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% if data['date-of-birth'][1] %}
+  {% set month = data['date-of-birth'][1] | returnDate %}
+{% endif %}
+
+{% block pageTitle %}
+What you need to do now - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="check-details-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">What you need to do now</h1>
+
+        <p class="govuk-body">You have now finished the online part of this service. The answers you've given have been
+          used to create your advance statement form.</p>
+
+      <div class="govuk-inset-text">
+        <p class="govuk-body">You now need to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Print your advance decision</li>
+          <li>Sign it</li>
+          <li>Share copies</li>
+        </ul>
+      </div>
+
+        <h2 class="govuk-heading-l">Print your advance statement</h2>
+
+      <section class="gem-c-attachment govuk-!-display-none-print">
+        <div class="gem-c-attachment__thumbnail">
+          <a class="govuk-link" target="_self" tabindex="-1" aria-hidden="true" href="#" onclick="return false;">
+            <svg class="gem-c-attachment__thumbnail-image" version="1.1" viewBox="0 0 99 140" width="99" height="140" aria-hidden="true">
+              <path d="M12 12h75v27H12zM12 59h9v9h-9zM12 77h9v9h-9zM12 95h9v9h-9zM12 113h9v9h-9zM30 59h57v9H30zM30 77h39v9H30zM30 95h57v9H30zM30 113h48v9H30z" stroke-width="0"></path>
+            </svg>
+          </a></div>
+        <div class="gem-c-attachment__details">
+          <h3 class="gem-c-attachment__title">
+            <a class="govuk-link gem-c-attachment__link" target="_self" href="#" onclick="return false;">Download your advance statement form</a>
+          </h3>
+          <p class="gem-c-attachment__metadata"><span class="gem-c-attachment__attribute"><abbr title="Portable Document Format" class="gem-c-attachment__abbr">PDF</abbr></span>, <span class="gem-c-attachment__attribute">19.5 KB</span>, <span class="gem-c-attachment__attribute">7 pages</span></p>
+        </div>
+      </section>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">What if it does not download?</span>
+          </summary>
+          <div class="govuk-details__text"><p class="govuk-body">Most computers will open the document automatically
+            when you click on the link above.
+            If the document doesn’t open automatically, you may need a PDF reader like Adobe Reader to view and print
+            it.</p></div>
+        </details>
+
+        <h2 class="govuk-heading-l">Signing</h2>
+
+        <p class="govuk-body">You should sign and date your advance statement, but you do not need a witness.</p>
+
+        <p class="govuk-body">There is no legal requirement to sign an advance statement but it can help to show it is
+          your wishes and that you have carefully considered them.</p>
+
+        <p class="govuk-body">An advance statement is not legally binding. This means that the people caring for you do
+          not have to follow the exact instructions in it,
+          but they must use it as a guide when making decisions on your behalf.</p>
+
+        <h2 class="govuk-heading-l">Sharing your form</h2>
+
+        <p class="govuk-body">Once you have completed your advance statement you will need to share it widely so that it
+          is known about and can be followed.</p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span
+              class="govuk-details__summary-text">Can I share a photocopy?</span></summary>
+          <div class="govuk-details__text"><p class="govuk-body">Yes, the law says a photocopy is valid.</p></div>
+        </details>
+
+        <p class="govuk-body">You should share a copy with your:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>relatives</li>
+          <li>close friends</li>
+          <li>GP surgery</li>
+          <li>anyone else involved in your care</li>
+        </ul>
+
+        <p class="govuk-body">You can make an appointment to discuss the form with your GP so that they understand your
+          wishes. If you do not want to discuss it with your GP you should still make sure it is added to your medical
+          record.</p>
+
+        <p class="govuk-body">It is a good idea to keep a copy with your other important documents, for example your
+          living will or health power of attorney.</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

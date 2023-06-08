@@ -1,0 +1,49 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% if data['change'] === 'true' %}
+  {% set action = '/v3/statement/check-details-1' %}
+{% elif data['change'] === 'final' %}
+  {% set action = '/v3/statement/check-details-2' %}
+{% endif %}
+
+{% block pageTitle %}
+What is your NHS number? - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="healthcare-do-you-know-chi-no">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/healthcare-gp-surgery'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Healthcare details</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="nhs-no">
+              What is your CHI number?
+            </label>
+          </h1>
+          <div id="chi-no-hint" class="govuk-hint">Your Community Health Index (CHI) number is a 10 digit number.</div>
+          <input class="govuk-input govuk-input--width-10" id="chi-no" name="chi-no" type="text" aria-describedby="chi-no-hint"  value="{{ data['chi-no'] }}">
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

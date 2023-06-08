@@ -1,0 +1,44 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+What things are important in your life? – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="values-start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/values-identity'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Your values</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="values-important">
+              What things are important in your life? (optional)
+            </label>
+          </h1>
+          <div id="values-important-hint" class="govuk-hint">For example, what gives your life meaning? How do you enjoy spending your time? Where do you like doing these things, how often, and who with?</div>
+          <textarea class="govuk-textarea" id="values-important" name="values-important" rows="5" aria-describedby="values-important-hint">{{ data['values-important'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

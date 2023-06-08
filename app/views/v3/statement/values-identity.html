@@ -1,0 +1,44 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+What things that are important to your identity? – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="values-important">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/values-religion'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Your values</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="values-identity">
+              What things that are important to your identity? (optional)
+            </label>
+          </h1>
+          <div id="values-identity-hint" class="govuk-hint">For example, what parts of your life are important to your identity? What name do you prefer to be called? What clothes do you like to wear? How important is your independence, privacy, or dignity?</div>
+          <textarea class="govuk-textarea" id="values-identity" name="values-identity" rows="5" aria-describedby="values-identity-hint">{{ data['values-identity'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

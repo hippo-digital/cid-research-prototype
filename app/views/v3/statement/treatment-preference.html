@@ -1,0 +1,44 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+Is there anything you would prefer not to happen to you? – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="treatment-health">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/v3/statement/check-details-2" method="post" class="form">
+
+        <p class="govuk-caption-l">Your treatment</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="treatment-preference">
+              Is there anything you would prefer not to happen to you? (optional)
+            </label>
+          </h1>
+          <div id="treatment-preference-hint" class="govuk-hint">For example, would you prefer not to be taken to hospital? Would receiving personal care by a member of the opposite sex be unacceptable to you?</div>
+          <textarea class="govuk-textarea" id="treatment-preference" name="treatment-preference" rows="5" aria-describedby="treatment-preference-hint">{{ data['treatment-preference'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

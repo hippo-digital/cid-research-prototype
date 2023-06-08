@@ -1,0 +1,44 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+Where would you like to be cared for? – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="care-food">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/treatment-conditions'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Your care</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="care-where">
+              Where would you like to be cared for? (optional)
+            </label>
+          </h1>
+          <div id="care-where-hint" class="govuk-hint">For example, would you prefer to be cared for in a hospice, a particular hospital, or in your own home? Who would you like to be involved with your day to day care?</div>
+          <textarea class="govuk-textarea" id="care-where" name="care-where" rows="5" aria-describedby="care-where-hint">{{ data['care-where'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

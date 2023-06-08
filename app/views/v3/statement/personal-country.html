@@ -1,0 +1,79 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% if data['change'] === 'true' %}
+  {% set action = '/v3/statement/check-details-1' %}
+{% elif data['change'] === 'final' %}
+  {% set action = '/v3/statement/check-details-2' %}
+{% endif %}
+
+{% block pageTitle %}
+  Where do you live? - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal-name">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="{{ action or '/v3/statement/personal-country-post' }}" method="post" class="form">
+
+      <p class="govuk-caption-l">Personal details</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Where do you live?
+            </h1>
+          </legend>
+          <div id="sign-in-hint" class="govuk-hint">You can help someone else make an advance decision. If you do this all of the information, statements and decisions must be their own.
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country" name="country" type="radio" value="England" {{ checked('country', 'England') }}>
+              <label class="govuk-label govuk-radios__label" for="country">
+                England
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-2" name="country" type="radio" value="Scotland" {{ checked('country', 'Scotland') }}>
+              <label class="govuk-label govuk-radios__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-3" name="country" type="radio" value="Wales" {{ checked('country', 'Wales') }}>
+              <label class="govuk-label govuk-radios__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-4" name="country" type="radio" value="Northern Ireland" {{ checked('country', 'Northern Ireland') }}>
+              <label class="govuk-label govuk-radios__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="#">Save as draft</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

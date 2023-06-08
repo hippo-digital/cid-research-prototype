@@ -1,0 +1,44 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance statement" %}
+
+{% block pageTitle %}
+Do you have any conditions or illnesses? – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="care-where">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/statement/treatment-health'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Your treatment</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="treatment-conditions">
+              Do you have any conditions or illnesses? (optional)
+            </label>
+          </h1>
+          <div id="treatment-conditions-hint" class="govuk-hint">For example, what information should others know about your health? Are you currently having any treatments or on any medications? Do you have any allergies?</div>
+          <textarea class="govuk-textarea" id="treatment-conditions" name="treatment-conditions" rows="5" aria-describedby="treatment-conditions-hint">{{ data['treatment-conditions'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

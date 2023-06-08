@@ -1,5 +1,5 @@
 {% extends "layout_cid_logged_out.html" %}
-{% set serviceName = "Make an advance decision (living will)" %}
+{% set serviceName = "Make an advance statement" %}
 
 {% if data['date-of-birth'][1] %}
   {% set month = data['date-of-birth'][1] | returnDate %}
@@ -252,7 +252,7 @@ Check your details - {{ serviceName }} - Compassion in Dying
         </div>
         {% endif %}
       </dl>
-      <form action="/v3/refuse-start" method="post" novalidate>
+      <form action="/v3/statement/values-start" method="post" novalidate>
         <input type="hidden" name="details-1-checked" value="true">
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
