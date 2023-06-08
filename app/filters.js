@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 module.exports = function (env) {
   /**
    * Instantiate object used to store the methods registered as a
@@ -37,6 +39,24 @@ module.exports = function (env) {
     documentation.
 
   ------------------------------------------------------------------ */
+
+  filters.nowrap = (input) => {
+    return '<span class="app-nowrap">' + input + '</span>'
+  }
+
+  filters.returnDate = (input) => {
+    var dateFormat = "MMMM"
+    var d = moment().month(input-1).format(dateFormat)
+    return d;
+  }
+
+  filters.ukMobile = (input) => {
+    // remove whitespace
+    input = input.replace(/\s/g,'')
+    // add the space back in
+    var number = input.substring(0, 5) + " " + input.substring(5)
+    return number;
+  }
 
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
