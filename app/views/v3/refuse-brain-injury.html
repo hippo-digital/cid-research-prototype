@@ -1,0 +1,113 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% if data['change'] === 'final' %}
+{% set action = '/v3/check-details-2' %}
+{% endif %}
+
+{% block pageTitle %}
+Decide when to refuse treatment for Brain injury – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="refuse-dementia">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l"><span class="govuk-caption-l">Decide when to refuse treatment <span class="govuk-visually-hidden"> for</span> </span>Brain injury</h1>
+
+        <p class="govuk-body">A brain injury can be caused by a head injury, an illness, such as meningitis or encephalitis, or a stroke.</p>
+        <p class="govuk-body">Brain injury can have a wide range of effects including difficulties thinking, speaking or remembering things.</p>
+        <p class="govuk-body">Brain injury may also cause some people to lose consciousness or go into a coma, vegetative state or minimally conscious state.</p>
+
+        <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">Read more about brain injury</span></summary><div class="govuk-details__text"><h3 class="govuk-heading-m">Coma</h3><p class="govuk-body">Someone is considered to be in a coma if they are unconscious for more than six hours. Being unconscious means that they cannot be woken and
+          they do not respond to light and sound. Sometimes people recover from their coma. But if a coma lasts for more than a few weeks, it usually
+          means that the person will die, or that when they emerge from their coma they will be in a vegetative state or minimally conscious state.</p><h3 class="govuk-heading-m">Vegetative state</h3><p class="govuk-body">If someone is in a vegetative state, it means that they are awake but do not have a conscious awareness of themselves or their surroundings.
+          If the symptoms of a vegetative state last for more than four weeks, this is referred to as a ‘continuing vegetative state’. If the symptoms persist
+          for one year after a traumatic brain injury (caused by a trauma to the head), or six months after any other acquired brain injury (such as a tumour or a stroke),
+          the person may be diagnosed as being in a permanent vegetative state. If someone is in a permanent vegetative state, it is very unlikely that they will recover.</p><h3 class="govuk-heading-m">Minimally conscious state</h3><p class="govuk-body">If someone is in a minimally conscious state, it means they are awake but only have a small level of awareness and minimal response to things around them.
+          For example, they may be able to respond to simple questions with words or movements. However, such awareness can come and go. If someone shows these symptoms
+          for more than four weeks, it is diagnosed as a continuing ‘minimally conscious state’. It is difficult to diagnose when a minimally conscious state becomes
+          permanent, but evidence suggests that it would be very rare for someone to recover after five years.</p></div></details>
+        <p class="govuk-body">This refusal of treatment will apply if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you have been diagnosed with a brain injury, and</li>
+          <li>you can no longer make or communicate a decision about your medical treatment, and</li>
+          <li>you are unlikely to regain the ability to make these decisions, and</li>
+          <li>you need a life-sustaining treatment to keep you alive</li>
+        </ul>
+        <p class="govuk-body">Life-sustaining treatment includes but is not limited to CPR, clinically assisted nutrition and hydration, artificial or mechanical ventilation
+          and antibiotics for life-threatening infections.</p>
+        <details class="govuk-details"><summary class="govuk-details__summary"><span class="govuk-details__summary-text">Read more about life-sustaining treatment</span></summary><div class="govuk-details__text"><h3 class="govuk-heading-m">What is life-sustaining treatment?</h3><p class="govuk-body">Life-sustaining treatment is any medical treatment that is intended to prolong or sustain
+          your life. Here are some examples of life-sustaining treatment:</p>
+          <h3 class="govuk-heading-m">Cardiopulmonary resuscitation (CPR)</h3>
+          <p class="govuk-body">This is an emergency attempt to restart a person’s heart and/or breathing if they stop
+          (called a cardiopulmonary arrest). CPR includes chest compressions (repeatedly pushing
+          very firmly on the chest in an attempt to pump blood round the body), artificially inflating
+          the lungs (by inserting a tube into the windpipe, by placing a mask over the mouth and nose,
+          or by mouth-to-mouth resuscitation) and defibrillation (using electric shocks to correct
+          irregularities in the heart’s rhythm). In many cases CPR is not successful at restarting a
+          person’s heart and breathing. If you have a long-term or chronic condition or a terminal
+          illness then it is much less likely to be successful.</p>
+          <h3 class="govuk-heading-m">Mechanical or artificial ventilation</h3>
+          <p class="govuk-body">Receiving mechanical or artificial ventilation means being put on a ventilator machine that
+          helps you to breathe if you cannot do so on your own. Ventilators are also known as
+          respirators or life-support machines.</p>
+          <h3 class="govuk-heading-m">Clinically assisted nutrition and hydration</h3>
+          <p class="govuk-body">If you cannot swallow, you may be given a liquid that contains the nutrition or hydration that you need.
+          This can be given through an intravenous drip (directly into a vein), a tube through the nose or a tube
+          directly into the stomach (sometimes known as a PEG feed).</p><h3 class="govuk-heading-m">Antibiotics</h3><p class="govuk-body">Antibiotics can be a life-sustaining treatment if they are given for a life-threatening infection
+          such as pneumonia. These types of infections are more common when someone is very ill, for example
+          if they have advanced cancer or have had a stroke. Antibiotics can be given through an intravenous
+          drip (directly into a vein) or by mouth as a tablet or liquid.</p></div></details>
+        <p class="govuk-body">This decision is only about life-sustaining treatment. This is not a refusal of pain relief or other treatments to keep you comfortable.</p>
+
+      <form action="{{ action or '/v3/refuse-central-nervous' }}" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Do you want to include brain injury in your advance decision?
+              </h2>
+            </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="refuse-brain-injury-yes" name="refuse-brain-injury" type="radio" value="Yes" {{ checked('refuse-brain-injury', 'Yes') }}>
+                <label class="govuk-label govuk-radios__label" for="refuse-brain-injury-yes">
+                  Yes, I refuse all life-sustaining treatment
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="refuse-brain-injury-no" name="refuse-brain-injury" type="radio" value="No" {{ checked('refuse-brain-injury', 'No') }}>
+                <label class="govuk-label govuk-radios__label" for="refuse-brain-injury-no">
+                  No, I do not want to include brain injury in my advance decision
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+      {% include "v3/includes/get-help.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% if data['change'] === 'final' %}
+{% set action = '/v3/check-details-2' %}
+{% endif %}
+
+{% block pageTitle %}
+Help doctors understand why you want to refuse treatment – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="avoid-doubt-pain">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class="govuk-caption-l">Your values</p>
+
+      <h1 class="govuk-heading-l govuk-!-padding-top-0">Help doctors understand why you want to refuse treatment</h1>
+
+        <p class="govuk-body">If you lose mental capacity, it's important for the doctor treating you to know why you've
+          made your advance decision.</p>
+        <div class="govuk-warning-text"><span aria-hidden="true" class="govuk-warning-text__icon">!</span><strong
+            class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
+          <p class="govuk-body">By explaining the reasons, your doctor can be confident that you understand and have
+            considered the decisions you've made.</p></strong></div>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Read more about life-sustaining treatment</span>
+          </summary>
+          <div class="govuk-details__text"><p class="govuk-body">Some people have included statements like:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>I have carefully considered the refusals of treatment included within this form.</li>
+              <li>I’m making this Advance Decision because I wish to avoid a situation where my life is prolonged even
+                though my quality of life is severely diminished and I am unable to make my own decisions and
+                participate in conversations. To me quality of life means...
+              </li>
+              <li>I fear the prospect of having my life prolonged with either a loss of decision making capacity or a
+                loss of physical ability that would lead me to depend on others far more than I fear death.
+              </li>
+              <li>I review this decision regularly and do not need another opportunity to reconsider my decision or
+                change my mind.
+              </li>
+              <li>I could not tolerate being unable to interact meaningfully with my family and friends. By
+                ‘meaningfully’ I mean being able to make and enjoy a joke, express my opinions, and provide a listening
+                ear to those who need it.
+              </li>
+              <li>Quality of life is much more important to me than quantity. This advance decision is an application of
+                the principles that I hold dear and that I have held for a long time.
+              </li>
+            </ul>
+          </div>
+        </details>
+
+      <form action="{{ action or '/v3/check-details-2' }}" method="post" class="form govuk-!-margin-top-8">
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="refuse-reasons">
+              Write your reasons for making this advance decision
+            </label>
+          </h2>
+          <div id="refuse-reasons-hint" class="govuk-hint">For example, some people make an advance decision because they have seen someone close to them being given a treatment that they would not want themselves, or there may be a particular situation that they want to avoid.</div>
+          <textarea class="govuk-textarea" id="refuse-reasons" name="refuse-reasons" rows="5" aria-describedby="refuse-reasons-hint">{{ data['refuse-reasons'] }}</textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+      {% include "v3/includes/get-help.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

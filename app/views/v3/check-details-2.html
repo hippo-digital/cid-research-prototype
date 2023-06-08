@@ -1,0 +1,399 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% if data['date-of-birth'][1] %}
+  {% set month = data['date-of-birth'][1] | returnDate %}
+{% endif %}
+
+{% block pageTitle %}
+What are your attorney's details? - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+{% block beforeContent %}
+  <a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-list' }}">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">Check your details</h1>
+      <h2 class="govuk-heading-m">1. Personal details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="personal-name?change=final">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['date-of-birth'][0] or '20' }} {{ month or 'May' }} {{ data['date-of-birth'][2] or '1988' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="personal-dob?change=final">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['address-line-1'] %}
+
+              {{ data['address-line-1'] or '18 New Station St' }},<br>
+
+              {% if data['address-line-2'] %}
+                {{ data['address-line-2'] }}<br>
+              {% endif %}
+
+              {{ data['address-town'] or 'Leeds' }},<br>
+
+              {% if data['address-county'] %}
+                {{ data['address-county'] }},<br>
+              {% endif %}
+
+              {{ data['address-postcode'] or 'LS1 3BE' }}
+
+            {% else %}
+              18 New Station St, <br>
+              Leeds, <br>
+              LS1 3BE
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="personal-address?change=final">
+              Change<span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Country of residence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['country'] or 'England' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="personal-country?change=final">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+
+        {% if data['features'] %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Distinguishing features
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['features'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="personal-country?change=final">
+              Change<span class="govuk-visually-hidden"> distinguishing features</span>
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+
+      </dl>
+      <h2 class="govuk-heading-m">2. Healthcare details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        {% if data['knows-chi-no'] or data['knows-nhs-no'] %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            {% if data['country'] === 'Scotland' %}
+            Do you know your CHI number
+            {% else %}
+            Do you know your NHS Number
+            {% endif %}
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['country'] === 'Scotland' %}
+            {{ data['knows-chi-no'] }}
+            {% else %}
+            {{ data['knows-nhs-no'] }}
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="{% if data['country'] === 'Scotland' %}healthcare-do-you-know-chi-no{% else %}healthcare-do-you-know-nhs-no{% endif %}?change=final">
+              Change<span class="govuk-visually-hidden"> {% if data['country'] === 'Scotland' %}
+            whether you know your CHI number
+            {% else %}
+            whether you know your NHS Number
+            {% endif %}</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+
+        {# logic to show and hide the numbers based on the yes/no and country #}
+
+
+        {% if data['country'] === 'Scotland' and data['knows-chi-no'] === 'Yes' %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            CHI number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['chi-no'] or '0101201234' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="healthcare-chi-no?change=final">
+              Change<span class="govuk-visually-hidden"> CHI number</span>
+            </a>
+          </dd>
+        </div>
+
+        {% elif data['country'] !== 'Scotland' and data['knows-nhs-no'] === 'Yes' %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            NHS Number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['nhs-no'] or '428 562 7000' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="healthcare-nhs-no?change=final">
+              Change<span class="govuk-visually-hidden">NHS Number</span>
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            GP Surgery
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['gp-name'] or 'Mayfield Medical Centre' }},<br>
+
+            {% if data['gp-address-line-1'] %}
+
+            {{ data['gp-address-line-1'] or '18 New Station St' }},<br>
+
+            {% if data['gp-address-line-2'] %}
+              {{ data['gp-address-line-2'] }}<br>
+            {% endif %}
+
+            {{ data['gp-address-town'] or 'Leeds' }},<br>
+
+            {% if data['gp-address-county'] %}
+              {{ data['gp-address-county'] }},<br>
+            {% endif %}
+
+            {{ data['gp-address-postcode'] or 'LS1 3BE' }}
+
+            {% else %}
+              18 New Station St, <br>
+              Leeds, <br>
+              LS1 3BE
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="healthcare-gp-surgery?change=final">
+              Change<span class="govuk-visually-hidden"> GP Surgery details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            LPA
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['has-lpa'] or 'No' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="healthcare-lpa?change=final">
+              Change<span class="govuk-visually-hidden"> LPA</span>
+            </a>
+          </dd>
+        </div>
+        {% if data['has-lpa'] === 'Yes' %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Attorney details
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+            {# loop through the array #}
+            {% for i in range(0, data['attorneys'].length) -%}
+
+            <p>{{ data['attorneys'][i][0] or 'Walker partners' }},<br>
+            {{ data['attorneys'][i][1] or 'email@example.org' }},<br>
+            {{ data['attorneys'][i][2] or '07890 123456' }}</p>
+
+            {%- endfor %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="healthcare-attorney-list">
+              Change<span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+      </dl>
+      <h2 class="govuk-heading-m">3. Decide when to refuse treatment</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Dementia
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refuse-dementia'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="refuse-dementia?change=final">
+              Change<span class="govuk-visually-hidden"> dementia preference</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Brain injury
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refuse-brain-injury'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="refuse-brain-injury?change=final">
+              Change<span class="govuk-visually-hidden"> Brain injury preference</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Diseases of the central nervous system
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refuse-central-nervous'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="refuse-central-nervous?change=final">
+              Change<span class="govuk-visually-hidden"> Diseases of the central nervous system preference</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Terminal illness
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refuse-terminal-illness'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="refuse-terminal-illness?change=final">
+              Change<span class="govuk-visually-hidden"> Terminal illness preference</span>
+            </a>
+          </dd>
+        </div>
+
+        {% if data['refuse-other'] %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other scenarios
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refuse-other'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="refuse-other?change=final">
+              Change<span class="govuk-visually-hidden"> Other scenarios preference</span>
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+
+      </dl>
+
+      <h2 class="govuk-heading-m">4. To avoid doubt</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Legal declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['legal'][0] === 'Confirmed'%}
+              Yes
+            {% else %}
+              No
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="avoid-doubt-legal?change=final">
+              Change<span class="govuk-visually-hidden"> legal declaration</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Pain relief
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {% if data['pain'][0] === 'Confirmed'%}
+            Yes
+            {% else %}
+            No
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="avoid-doubt-pain?change=final">
+              Change<span class="govuk-visually-hidden"> Pain relief preference</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <h2 class="govuk-heading-m">5. Your values</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help your doctor understand why you want to refuse treatment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['refuse-reasons'] or 'Not completed' }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="your-values-why-refuse?change=final">
+              Change<span class="govuk-visually-hidden"> legal declaration</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <form action="/v3/refuse-start" method="post" novalidate>
+        <input type="hidden" name="details-1-checked" value="true">
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

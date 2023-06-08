@@ -1,0 +1,74 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% block pageTitle %}
+Understanding when your advance decision will apply – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="refuse-understanding">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <div aria-labelledby="govuk-notification-banner-title" class="govuk-notification-banner" data-module="govuk-notification-banner"
+           role="region">
+        <div class="govuk-notification-banner__content">
+          <h1 class="govuk-heading-xl">Understanding when your advance decision will apply</h1>
+          <p class="govuk-body">Your advance decision will only be used in very specific scenarios, depending on the
+            answers you give.</p>
+          <p class="govuk-body">For example, if you choose to include dementia in your advance decision your refusal
+            of treatment will only apply if:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you have been diagnosed with dementia, and</li>
+            <li>you can no longer make or communicate a decision about your medical treatment, and</li>
+            <li>you are unlikely to regain the ability to make these decisions, and</li>
+            <li>you need a life-sustaining treatment to keep you alive</li>
+          </ul>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary"><span
+                class="govuk-details__summary-text">What is mental capacity?</span></summary>
+            <div class="govuk-details__text"><p class="govuk-body">Mental capacity is the ability to make and
+              communicate a decision for yourself.</p>
+              <p class="govuk-body">While you have mental capacity you have the right to make decisions about your
+                medical treatment and care. You can choose to refuse or consent to treatment.</p>
+              <p class="govuk-body">Your advance decision can only be used if you do not have mental capacity to make
+                or communicate a decision for yourself.</p>
+              <p class="govuk-body">The law in England and Wales says that someone’s mental capacity should be
+                assumed, unless there is reason to question it. For example, if they have had a brain injury or a
+                diagnosis of dementia.</p>
+              <p class="govuk-body">You must be able to do all four of these things to have mental capacity to make a
+                decision:</p>
+              <ol class="govuk-list govuk-list--number">
+                <li>Understand the information</li>
+                <li>Retain the information long enough to make a decision</li>
+                <li>Weigh up the information against other factors</li>
+                <li>Communicate the decision once you have made it</li>
+              </ol>
+              <p class="govuk-body">Mental capacity is decision specific. This means that someone may have the mental
+                capacity to make some decisions but not others. For example, someone with advanced dementia may have
+                the mental
+                capacity to decide what they want to eat that day, but not to make a decision about refusing CPR.</p>
+              <p class="govuk-body">In Scotland and Northern Ireland the principle of mental capacity is similar, but
+                they have their own definitions. The Office of the Public Guardian in Scotland has a <a
+                    class="govuk-link" href="https://www.publicguardian-scotland.gov.uk/adults-with-incapacity-(scotland)-act/definition-of-incapacity"
+                    target="_blank">helpful
+                  definition of
+                  incapacity</a> on their website. The Department of Health NI define mental capacity in their <a
+                    class="govuk-link" href="https://www.health-ni.gov.uk/mca-codes-practice" target="_blank">Code of
+                  Practice (PDF, 2.8MB)</a>.</p></div>
+          </details>
+          <a href="refuse-dementia" class="govuk-button">Continue</a>
+        </div>
+      </div>
+
+      {% include "v3/includes/get-help.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}

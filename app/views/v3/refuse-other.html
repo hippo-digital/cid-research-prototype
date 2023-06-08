@@ -1,0 +1,64 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% if data['change'] === 'final' %}
+{% set action = '/v3/check-details-2' %}
+{% endif %}
+
+{% block pageTitle %}
+Decide when to refuse treatment for Other scenarios – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="refuse-terminal-illness">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l"><span class="govuk-caption-l">Decide when to refuse treatment <span class="govuk-visually-hidden"> for</span> </span>Other scenarios</h1>
+
+        <p class="govuk-body">The four scenarios included in this form cover the main conditions that may lead you to
+          lose mental capacity and require a life-sustaining treatment.</p>
+        <div class="govuk-warning-text"><span aria-hidden="true" class="govuk-warning-text__icon">!</span><strong
+            class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
+          <p class="govuk-body">You do not have to write any additional refusals of treatment here if you do not want
+            to.</p></strong></div>
+        <p class="govuk-body">If you do choose to write something here your refusal of treatment needs to be clear to
+          the doctor reading it. This means you need to include:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the treatment you want to refuse</li>
+          <li>the scenario you want to refuse it in</li>
+        </ul>
+
+      <form action="{{ action or '/v3/avoid-doubt-legal' }}" method="post" class="form govuk-!-margin-top-8">
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="refuse-other">
+              Write your own refusal of treatment (optional)
+            </label>
+          </h2>
+          <div id="refuse-other-hint" class="govuk-hint">For example, some people want to include "I refuse CPR in every situation, regardless of the cause or prognosis".</div>
+          <textarea class="govuk-textarea" id="refuse-other" name="refuse-other" rows="5" aria-describedby="refuse-other-hint">{{ data['refuse-other'] }}</textarea>
+        </div>
+
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+
+      {% include "v3/includes/get-help.html" %}
+
+    </div>
+  </div>
+
+{% endblock %}
