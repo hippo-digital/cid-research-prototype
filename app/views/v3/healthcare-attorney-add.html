@@ -1,16 +1,12 @@
 {% extends "layout_cid_logged_out.html" %}
 {% set serviceName = "Make an advance decision (living will)" %}
 
-{% if data['change'] === 'true' %}
-{% set action = '/v3/check-details-1' %}
-{% endif %}
-
 {% block pageTitle %}
 What are your attorney's details? - {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="healthcare-lpa">Back</a>
+  <a class="govuk-back-link" href="{{ prevURL or 'healthcare-lpa' }}">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +15,7 @@ What are your attorney's details? - {{ serviceName }} - Compassion in Dying
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="{{ action or '/v3/healthcare-attorney-add-post'}}" method="post" class="form">
+      <form action="/v3/healthcare-attorney-add-post" method="post" class="form">
 
         <p class="govuk-caption-l">Healthcare details</p>
 
@@ -31,23 +27,26 @@ What are your attorney's details? - {{ serviceName }} - Compassion in Dying
           <label class="govuk-label" for="attorney-name">
             Full name
           </label>
-          <input class="govuk-input" id="attorney-name" name="attorney-name" type="text" spellcheck="false" value="{{ data['attorney-name'] }}">
+          <input class="govuk-input" id="attorney-name" name="attorney-name" type="text" spellcheck="false" value="{{ attorneyName or '' }}">
         </div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="attorney-email">
             Email address
           </label>
-          <input class="govuk-input" id="attorney-email" name="attorney-email" type="email" spellcheck="false" value="{{ data['attorney-email'] }}">
+          <input class="govuk-input" id="attorney-email" name="attorney-email" type="email" spellcheck="false" value="{{ attorneyEmail or '' }}">
         </div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="attorney-telephone-number">
             Phone number
           </label>
-          <input class="govuk-input govuk-input--width-20" id="attorney-telephone-number" name="attorney-telephone-number" type="tel" autocomplete="tel" value="{{ data['attorney-telephone-number'] }}">
+          <input class="govuk-input govuk-input--width-20" id="attorney-telephone-number" name="attorney-telephone-number" type="tel" autocomplete="tel" value="{{ attorneyPhone or '' }}">
         </div>
 
+        {% if item %}
+        <input class="govuk-input" name="amend-attorney" type="hidden" value="{{ item }}">
+        {% endif %}
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">

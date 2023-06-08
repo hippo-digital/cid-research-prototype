@@ -176,3 +176,18 @@ a, a:link {
 		color: $cid-dark-green;
 	}
 }
+
+/* add some styling to the button element to make it look like a hyperlink */
+.unstyle-button {
+	background: none!important;
+	border: none;
+	padding: 0!important;
+	font-family: geograph, Arial, sans-serif;
+	font-size: 18px;
+	color: $cid-dark-green;
+	text-decoration: underline;
+	cursor: pointer;
+	&:hover {
+		text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+	}
+}

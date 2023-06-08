@@ -1,8 +1,8 @@
 {% extends "layout_cid_logged_out.html" %}
 {% set serviceName = "Make an advance decision (living will)" %}
-
-{% if data['change'] === 'true' %}
-{% set action = '/v3/check-details-1' %}
+{% set NumAttorneys = data['attorneys'].length %}
+{% if NumAttorneys > 1 %}
+  {% set attorneyText = 'attorneys' %}
 {% endif %}
 
 {% block pageTitle %}
@@ -10,7 +10,7 @@ Your attorneys - {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="healthcare-attorney-add">Back</a>
+  <a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-add' }}">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -19,14 +19,51 @@ Your attorneys - {{ serviceName }} - Compassion in Dying
 
     <div class="govuk-grid-column-two-thirds">
 
-      <form action="{{ action or '/v3/healthcare-attorney-list-post'}}" method="post" class="form">
-
         <p class="govuk-caption-l">Healthcare details</p>
 
         <h1 class="govuk-heading-l govuk-!-padding-top-0">
           Your attorneys
         </h1>
 
+        <p>You have added {{ NumAttorneys }} {{ attorneyText or 'attorney' }}</p>
+
+        <form action="/v3/healthcare-attorney-list-remove" method="POST" role="form">
+
+          {% if data['attorneys'].length %}
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+            {# loop through the array #}
+            {% for i in range(0, data['attorneys'].length) -%}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                {{ data['attorneys'][i][0] }}
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <a href="healthcare-attorney-add?item={{ i }}">Edit details</a> |
+                <button class="unstyle-button" name="remove" value="{{ i }}">Remove</button>
+              </dd>
+            </div>
+
+            {%- endfor %}
+
+
+
+          </dl>
+
+          {% else %}
+
+          {# if all values can be removed, you'll need a placeholder when the array is empty #}
+          <p class="govuk-body">No attorneys added yet</p>
+
+          {% endif %}
+
+        </form>
+
+      <form action="/v3/healthcare-attorney-list-post" method="post" class="form">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
