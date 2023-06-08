@@ -93,6 +93,23 @@ What are your attorney's details? - {{ serviceName }} - Compassion in Dying
             </a>
           </dd>
         </div>
+
+        {% if data['features'] %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Distinguishing features
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['features'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="personal-country?change=true">
+              Change<span class="govuk-visually-hidden"> distinguishing features</span>
+            </a>
+          </dd>
+        </div>
+        {% endif %}
+
       </dl>
       <h2 class="govuk-heading-m">Healthcare details</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -108,7 +125,6 @@ What are your attorney's details? - {{ serviceName }} - Compassion in Dying
             {% endif %}
           </dt>
           <dd class="govuk-summary-list__value">
-
             {% if data['country'] === 'Scotland' %}
             {{ data['knows-chi-no'] }}
             {% else %}
