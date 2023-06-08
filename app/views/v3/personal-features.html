@@ -1,0 +1,47 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% if data['change'] === 'true' %}
+{% set action = '/v3/check-details-1' %}
+{% endif %}
+
+{% block pageTitle %}
+Do you have any distinguishing features? (optional) - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="personal-dob">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="{{ action or '/v3/personal-features-post'}}" method="post" class="form">
+
+        <p class="govuk-caption-l">Personal details</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="more-detail">
+              Do you have any distinguishing features? (optional)
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">Do not include personal or financial information, like your National Insurance number or credit card details.</div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Save as draft</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

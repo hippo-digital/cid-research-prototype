@@ -1,5 +1,4 @@
-
-{% extends "layout_cid_start_page.html" %}
+{% extends "layout_cid_logged_out.html" %}
 
 {% block pageTitle %}
   Home – {{ serviceName }}
@@ -8,85 +7,61 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        {{ serviceName }}
-      </h1>
 
-      <p>
-        A living will (sometimes referred to as an advance decision) will allow you to record any medical treatments that you would like to refuse in the future if you lose the capacity to decide.
-      </p>
+    <div class="govuk-grid-column-full">
 
-      <p>
-        At the end it will generate a legal document about your wishes for treatment and care that you need to print, sign, witness and share.
-      </p>
+      <h1 class="govuk-heading-xl">Make an advance decision (living will)</h1>
 
-      <p>
-        You don’t have to do everything all at once. At any point you can save what you’ve done and come back to it later.
-      </p>
+      <p class="govuk-body-l">You can use this free online service to make an advance decision (living will). You can also
+        use it to make an advance statement.<!-- --> </p>
+      <p class="govuk-body">You can use this service if you:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>are 18 or older</li>
+        <li>have mental capacity</li>
+        <li>live in the UK</li>
+      </ul>
+      <p class="govuk-body">This service will take you through the form step-by-step. We'll use your answers to create
+        your form that you can save, print, sign and get witnessed.</p>
+      <p class="govuk-body">You then need to share a copy with your GP and those close to you.</p>
+      <div class="nhsuk-warning-callout">
 
-      <a href="register" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-        Start now
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-        </svg>
-      </a>
-      
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            How can I record my wishes?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p>An Advance Decision lets you record any medical treatments that you don’t want to be given in the future.</p>
-          <p>An Advance Statement lets you record anything that’s important to you when thinking about your health, care and wellbeing, like any religious or spiritual views, your daily routine or where you would like to be cared for.</p>
+        <h3 class="nhsuk-warning-callout__label">Important<span class="govuk-visually-hidden">:</span></h3>
+
+        <p class="govuk-body">Advance decisions are legally binding in England, Wales, and Northern Ireland. They are not
+          legally binding in Scotland but you can still use this service to create an advance decision as they should be
+          taken into account by doctors.</p></div>
+
+
+      <div id="account-grid">
+        <div id="account-grid-left">
+          <div><h3 class="govuk-heading-m">I do not have an account</h3>
+            <p class="govuk-body">To start you first need to set up an online account.
+              You can use your account to make a form for yourself or help someone else.</p>
+            <a href="dashboard" class="govuk-button govuk-button--start"> Create my account <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg></a>
+          </div>
         </div>
-      </details>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Who can make an Advance Decision?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          You can only make an Advance Decision if you are over 18 and currently have the capacity to do so.
+        <div id="account-grid-right">
+          <div><h3 class="govuk-heading-m">I already have an account</h3>
+            <p class="govuk-body">Continue making your advance decision or advance statement online by signing into your
+              existing account.</p>
+            <a href="dashboard" class="govuk-button govuk-button--start">Sign in <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg></a>
+          </div>
         </div>
-      </details>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Will my doctor follow my Advance Decision?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          Advance Decisions are legally binding in England and Wales, as long as they meet certain requirements ({{ serviceName }} will help you meet these). If you live in Scotland or Northern Ireland you can still use {{ serviceName }}, but the legal situation is a bit different. <a href="">Click here</a> for more info.
-        </div>
-      </details>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Can I do it all using this website?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          Not quite. You need to print off your final documents, sign them and share them with people close to you and your doctor. If you’re making an Advance Decision to refuse life sustaining treatment you also have to get it witnessed. It’s not legally binding until you’ve done this.
-        </div>
-      </details>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Do I have to do it online?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body">No, you can:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Download a form to complete by hand here.</li>
-            <li>Contact us on 0800 999 2434 or info@compassionindying.org.uk and we can send a form and guidance notes to you in the post.</li>
-          </ul>
-        </div>
-      </details>
+      </div>
+      <p class="govuk-body">Some people complete their form in one go, others take longer. Everyone is different and you
+        should take as long as you need. You can save your progress as you go, so you can return to it when you're
+        ready.</p>
+      <h3 class="govuk-heading-m">Would you prefer a paper form?</h3>
+      <p class="govuk-body">Download our <a class="govuk-link" href="https://cdn.compassionindying.org.uk/wp-content/uploads/advance-decision-pack-v2.3.pdf"
+                                            target="_blank">template
+        advance decision form (PDF, 484KB)</a> and print it, then complete it by hand. If you do not have a printer, you
+        can <a class="govuk-link" href="https://compassionindying.org.uk/order-living-will-advance-decision-pack/"
+               target="_blank">order an advance decision
+          form</a> and we'll post it to you.</p>
 
     </div>
   </div>
