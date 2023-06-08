@@ -1,0 +1,149 @@
+{% extends "layout_cid_logged_out.html" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+
+{% if data['date-of-birth'][1] %}
+  {% set month = data['date-of-birth'][1] | returnDate %}
+{% endif %}
+
+{% block pageTitle %}
+What are your attorney's details? - {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="check-details-2">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">What you need to do now</h1>
+
+        <p class="govuk-body-lead">You have now finished the online part of this service. The answers you've given have been
+          used to create your advance decision form.</p>
+
+      <div class="govuk-inset-text">
+        <p class="govuk-body">You now need to:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Print your advance decision</li>
+          <li>Sign and get it witnessed</li>
+          <li>Share copies</li>
+        </ul>
+      </div>
+
+        <h2 class="govuk-heading-l">Print your advance decision</h2>
+
+      <section class="gem-c-attachment govuk-!-display-none-print">
+        <div class="gem-c-attachment__thumbnail">
+          <a class="govuk-link" target="_self" tabindex="-1" aria-hidden="true" href="#" onclick="return false;">
+            <svg class="gem-c-attachment__thumbnail-image" version="1.1" viewBox="0 0 99 140" width="99" height="140" aria-hidden="true">
+              <path d="M12 12h75v27H12zM12 59h9v9h-9zM12 77h9v9h-9zM12 95h9v9h-9zM12 113h9v9h-9zM30 59h57v9H30zM30 77h39v9H30zM30 95h57v9H30zM30 113h48v9H30z" stroke-width="0"></path>
+            </svg>
+          </a></div>
+        <div class="gem-c-attachment__details">
+          <h3 class="gem-c-attachment__title">
+            <a class="govuk-link gem-c-attachment__link" target="_self" href="#" onclick="return false;">Download your advance decision form</a>
+          </h3>
+          <p class="gem-c-attachment__metadata"><span class="gem-c-attachment__attribute"><abbr title="Portable Document Format" class="gem-c-attachment__abbr">PDF</abbr></span>, <span class="gem-c-attachment__attribute">19.5 KB</span>, <span class="gem-c-attachment__attribute">7 pages</span></p>
+        </div>
+      </section>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">What if it does not download?</span>
+          </summary>
+          <div class="govuk-details__text"><p class="govuk-body">Most computers will open the document automatically
+            when you click on the link above.
+            If the document doesn’t open automatically, you may need a PDF reader like Adobe Reader to view and print
+            it.</p></div>
+        </details>
+
+        <h2 class="govuk-heading-l">Signing and witnessing</h2>
+
+        <p class="govuk-body">You must sign your advance decision in the presence of a witness, who must also sign the
+          form.</p>
+        <p class="govuk-body">Your advance decision is not legally binding until it has been signed and witnessed.</p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">What if I cannot sign the form?</span>
+          </summary>
+          <div class="govuk-details__text"><p class="govuk-body">If you are unable to sign the form, you can ask someone
+            else to sign it on your behalf in your presence. If you do this:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>the person signing should write a statement next to the signature explaining that you have directed
+                them to sign on your behalf
+              </li>
+              <li>your witness cannot be the same person who signed the form on your behalf</li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="govuk-warning-text">
+          <span aria-hidden="true" class="govuk-warning-text__icon">!</span><strong
+            class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
+          <p class="govuk-body">Advance decisions are legally binding in England, Wales, and Northern Ireland. They are
+            not legally binding in Scotland but it should still be taken into account by doctors.</p></strong>
+        </div>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span
+              class="govuk-details__summary-text">Who can be my witness?</span></summary>
+          <div class="govuk-details__text"><p class="govuk-body">Your witness can be anyone over the age of 18. It can
+            be a friend or relative.</p>
+            <p class="govuk-body">If possible, you should not ask a close relative, partner, anyone who will inherit
+              your money or property after your death, or your lasting power of attorney to be your witness.
+              This is to avoid someone later questioning if you were put under pressure to make your advance
+              decision.</p>
+          </div>
+        </details>
+
+        <h2 class="govuk-heading-l">Sharing your form</h2>
+
+        <p class="govuk-body">Once you have completed your advance decision you will need to share it widely so that it
+          is known about and can be followed.</p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span
+              class="govuk-details__summary-text">Can I share a photocopy?</span></summary>
+          <div class="govuk-details__text"><p class="govuk-body">Yes, the law says a photocopy is valid.</p></div>
+        </details>
+
+        <p class="govuk-body">You should share a copy with your:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>relatives</li>
+          <li>close friends</li>
+          <li>GP surgery</li>
+        </ul>
+
+        <p class="govuk-body">Different parts of the NHS do not always share medical records electronically. So it can
+          be a good idea to also share a copy with your:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>local hospital</li>
+          <li>local ambulance trust</li>
+        </ul>
+
+        <p class="govuk-body">You can use the NHS website to find your local hospital. You need to ask the patient
+          records team at your local ambulance trust how your advance decision can be recorded.</p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary"><span class="govuk-details__summary-text">What happens in an emergency?</span>
+          </summary>
+          <div class="govuk-details__text"><p class="govuk-body">An advance decision should be followed but in an
+            emergency paramedics may not know about it. Paramedics might look in your bag for details of who you are. To
+            help them find your advance decision you can carry a copy in a clearly marked envelope in your bag.</p>
+            <p class="govuk-body">When you’re at home you can keep a copy in an obvious place. You can use the Lions
+              Club Message in a Bottle scheme to keep a copy of your advance decision in the fridge. Paramedics should
+              know to look for the Lions Club symbol when entering your house and to check the fridge.</p>
+            <p class="govuk-body">If you’ve already completed your advance decision, you can order a wallet-sized notice
+              card to keep with you in case of an emergency.</p>
+          </div>
+        </details>
+
+    </div>
+  </div>
+
+{% endblock %}
