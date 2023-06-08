@@ -75,6 +75,15 @@ router.post('/v3/healthcare-do-you-know-chi-no-post', function (req, res) {
   }
 })
 
+// generate back link
+router.get('/v3/healthcare-gp-surgery', function (req, res) {
+  res.locals.prevURL = req.get('Referrer')
+  prevURL = res.locals.prevURL
+
+  return res.render('v3/healthcare-gp-surgery', {
+    'prevURL': prevURL
+  })
+})
 
 router.post('/v3/healthcare-lpa-post', function (req, res) {
   let lpa = req.session.data['has-lpa']

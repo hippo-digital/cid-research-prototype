@@ -3,6 +3,8 @@
 
 {% if data['change'] === 'true' %}
   {% set action = '/v3/check-details-1' %}
+{% elif data['change'] === 'final' %}
+  {% set action = '/v3/check-details-2' %}
 {% endif %}
 
 {% block pageTitle %}
