@@ -56,7 +56,7 @@
 $govuk-font-family: "geograph", "Arial";
 
 .govuk-heading-xl {
-    font-family: "SouvenirStd-Demi", "Georgia";
+    font-family: "geograph", "Arial";
   }
 
 // Override GOV.UK brand colour.
@@ -82,6 +82,9 @@ $govuk-canvas-background-colour: #ffffff;
 	color: #ffffff;
 }
 
+a.govuk-button {
+	text-decoration: none;
+}
 // Set CID primary colours.
 $cid-dark-green: #00403a;
 $cid-mid-green: #32723c;
@@ -103,11 +106,11 @@ $cid-bright-green: #71d76d;
 
 .govuk-header__content, .govuk-header__link:link, .govuk-header__link:visited, .govuk-header__service-name {
 	color: #ffffff;
-	font-family: "SouvenirStd-Light";
+	font-family: "geograph", "Arial";
 }
 
 .cid-header__link:link, .cid-header__link:visited {
-	font-family: "geograph";
+	font-family: "geograph", "Arial";
 	color: #ffffff;
 }
 
@@ -128,7 +131,7 @@ a:visited {
 // Override heading fonts to use Souvenir
 
 .govuk-heading-xl {
-    font-family: "SouvenirStd-Light", "Georgia";
+    font-family: "geograph", "Arial";
     color: #00403a;
   }
 
@@ -138,7 +141,7 @@ color: #00403a;
 }
 
 .govuk-panel__title {
-	font-family: "SouvenirGreek-Light", "Georgia";
+	font-family: "geograph", "Arial";
 }
 
 // Override caption colour
@@ -163,4 +166,13 @@ a, a:link {
 .govuk-details__summary {
     color: #32723c;
     font-weight: 700;
+}
+
+.govuk-back-link {
+	display: block;
+	margin-top: 30px;
+	color: $cid-dark-green;
+	&:link, &:visited {
+		color: $cid-dark-green;
+	}
 }
