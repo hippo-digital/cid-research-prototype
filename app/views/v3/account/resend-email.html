@@ -1,0 +1,45 @@
+{% extends "layout_v3.html" %}
+{% set registerActive = "govuk-header__navigation-item--active" %}
+
+{% block pageTitle %}
+Resend your activation email – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-list' }}">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Resend your activation email</h1>
+
+      <p>Enter your email address below. If the email needs activating, we will send you the activation email. You need to click on the link in the email to verify your email address and activate your account.</p>
+
+      <form action="registered" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="email-address">
+            Enter your email address
+          </label>
+          <input class="govuk-input govuk-input" id="email-address" name="email-address" type="email" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="email-address-confirm">
+            Confirm your email address
+          </label>
+          <input class="govuk-input govuk-input" id="email-address-confirm" name="email-address-confirm" type="email" spellcheck="false">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Email me the link
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

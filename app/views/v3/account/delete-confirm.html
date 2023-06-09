@@ -1,0 +1,24 @@
+{% extends "layout_v3.html" %}
+{% set signedin = "false" %}
+
+{% block pageTitle %}
+Your account has been deleted – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-list' }}">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your account has been deleted</h1>
+
+      <p><a href="../index">Return to homepage</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -31,8 +31,52 @@
       "url": "http://localhost:3000/v3/account/success"
     },
     {
+      "label": "CID - help-support",
+      "url": "http://localhost:3000/v3/help-and-support"
+    },
+    {
       "label": "CID - sign-in",
       "url": "http://localhost:3000/v3/account/sign-in"
+    },
+    {
+      "label": "CID - account-settings",
+      "url": "http://localhost:3000/v3/account/manage"
+    },
+    {
+      "label": "CID - account-settings-changed-email",
+      "url": "http://localhost:3000/v3/account/manage?show-banner=changeemail"
+    },
+    {
+      "label": "CID - account-settings-changed-password",
+      "url": "http://localhost:3000/v3/account/manage?show-banner=changepassword"
+    },
+    {
+      "label": "CID - change-password",
+      "url": "http://localhost:3000/v3/account/change-password"
+    },
+    {
+      "label": "CID - change-email",
+      "url": "http://localhost:3000/v3/account/change-email"
+    },
+    {
+      "label": "CID - reset-password",
+      "url": "http://localhost:3000/v3/account/reset-password"
+    },
+    {
+      "label": "CID - resend-email",
+      "url": "http://localhost:3000/v3/account/resend-email"
+    },
+    {
+      "label": "CID - account-delete",
+      "url": "http://localhost:3000/v3/account/delete"
+    },
+    {
+      "label": "CID - account-delete-confirm",
+      "url": "http://localhost:3000/v3/account/delete-confirm"
+    },
+    {
+      "label": "CID - account-delete-confirm",
+      "url": "http://localhost:3000/v3/account/change-password"
     },
     {
       "label": "CID - avoid-doubt-legal",
@@ -130,10 +174,6 @@
       "url": "http://localhost:3000/v3/refuse-other"
     },
     {
-      "label": "CID - refuse-start",
-      "url": "http://localhost:3000/v3/refuse-start"
-    },
-    {
       "label": "CID - refuse-terminal-illness",
       "url": "http://localhost:3000/v3/refuse-terminal-illness"
     },
@@ -146,7 +186,7 @@
       "url": "http://localhost:3000/v3/refuse-start"
     },
     {
-      "label": "CID - refuse-start",
+      "label": "CID - values-why-refuse",
       "url": "http://localhost:3000/v3/your-values-why-refuse"
     },
     {

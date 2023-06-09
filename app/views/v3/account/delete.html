@@ -1,0 +1,27 @@
+{% extends "layout_v3.html" %}
+{% set signedin = "true" %}
+{% set accountActive = "govuk-header__navigation-item--active" %}
+
+{% block pageTitle %}
+Delete your account – {{ serviceName }} - Compassion in Dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="manage">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Delete your account</h1>
+
+      <p>You can update your account details, including your password and email address. You can also delete you account</p>
+
+      <p><a href="delete-confirm">Yes, delete my account</a></p>
+      <p><a href="../dashboard">No, return to my forms</a></p>
+    </div>
+  </div>
+
+{% endblock %}

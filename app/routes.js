@@ -401,6 +401,27 @@ router.get('/v3/statement/check-details-1', function (req, res) {
   })
 })
 
+// account screen banners
+
+router.get('/v3/account/manage', function (req, res) {
+  // look for active banners
+  var banner = req.session.data['show-banner']
+  let whichBanner = ''
+
+  if (banner === 'changeemail') {
+    whichBanner = 'changeemail'
+  } else if (banner === "changepassword") {
+    whichBanner = 'changepassword'
+  } else {
+    whichBanner = ''
+  }
+  // remove once this is run so it only displays once
+  req.session.data['show-banner'] = ''
+
+  return res.render('v3/account/manage', {
+    'banner': whichBanner
+  })
+})
 
 
 
