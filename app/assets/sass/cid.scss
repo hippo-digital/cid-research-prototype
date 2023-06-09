@@ -114,6 +114,11 @@ $cid-bright-green: #71d76d;
 	color: #ffffff;
 }
 
+.govuk-header__navigation-item--active a:link,
+.govuk-header__navigation-item--active a:visited {
+	color: $cid-bright-green;
+}
+
 a:active {
 	color: #000000;
 	background-color: $cid-bright-green;

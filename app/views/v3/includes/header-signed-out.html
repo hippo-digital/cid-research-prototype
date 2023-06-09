@@ -1,3 +1,5 @@
+
+
 <header class="govuk-header " data-module="govuk-header" role="banner">
   <div class="govuk-header__container govuk-width-container">
 
@@ -22,23 +24,23 @@
 
         <ul class="govuk-header__navigation-list" id="navigation">
 
-          <li class="govuk-header__navigation-item">
+          <li class="govuk-header__navigation-item {{ homeActive }}">
             <a class="govuk-header__link" href="/v3/index">Home</a>
           </li>
 
-          <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/v3/dashboard">Advanced Decision</a>
+          <li class="govuk-header__navigation-item {{ decisionActive }}">
+            <a class="govuk-header__link" href="/v3/index">Advanced Decision</a>
           </li>
 
-          <li class="govuk-header__navigation-item">
+          <li class="govuk-header__navigation-item {{ helpActive }}">
             <a class="govuk-header__link" href="/v3/help-and-support">Help and support</a>
           </li>
 
-          <li class="govuk-header__navigation-item">
+          <li class="govuk-header__navigation-item {{ registerActive }}">
             <a class="govuk-header__link" href="/v3/account/register">Register</a>
           </li>
 
-          <li class="govuk-header__navigation-item">
+          <li class="govuk-header__navigation-item {{ signinActive }}">
             <a class="govuk-header__link" href="/v3/account/sign-in">Sign in</a>
           </li>
 

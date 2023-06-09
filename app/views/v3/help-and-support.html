@@ -1,0 +1,33 @@
+{% extends "layout_v3.html" %}
+{% set signedin = "false" %}
+{% set helpActive = "govuk-header__navigation-item--active" %}
+
+{% block pageTitle %}
+  Home – {{ serviceName }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Help and support</h1>
+
+      <p class="govuk-body">Contact us if you need help with this service or support filling in your form.</p>
+
+      <h2 class="govuk-heading-s">Telephone</h2>
+
+      <p>Our specialist nurse-led team is available to help on the phone.</p>
+
+      <p>0800 999 2434 (Monday to Friday, 11am to 3pm)</p>
+
+      <h2 class="govuk-heading-s">Email</h2>
+
+      <p><a href="mailto:info@compassionindying.org.uk"></a>info@compassionindying.org.uk<br>
+        We aim to respond within 2 working days</p>
+
+    </div>
+  </div>
+
+{% endblock %}
