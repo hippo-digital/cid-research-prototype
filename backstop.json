@@ -35,6 +35,10 @@
       "url": "http://localhost:3000/v3/help-and-support"
     },
     {
+      "label": "CID - open-source",
+      "url": "http://localhost:3000/v3/open-source"
+    },
+    {
       "label": "CID - sign-in",
       "url": "http://localhost:3000/v3/account/sign-in"
     },
@@ -75,7 +79,7 @@
       "url": "http://localhost:3000/v3/account/delete-confirm"
     },
     {
-      "label": "CID - account-delete-confirm",
+      "label": "CID - account-change-password",
       "url": "http://localhost:3000/v3/account/change-password"
     },
     {

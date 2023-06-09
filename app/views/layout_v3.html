@@ -25,3 +25,14 @@
 {% endblock %}
 
 
+{% block bodyEnd %}
+{% if data['devMode'] === 'true' %}
+{% include "includes/devmode.html" %}
+{% endif %}
+
+{% block scripts %}
+{% include "includes/scripts.html" %}
+
+{% block pageScripts %}{% endblock %}
+{% endblock %}
+{% endblock %}

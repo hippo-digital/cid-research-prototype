@@ -495,4 +495,26 @@ router.get('/v3/account/manage', function (req, res) {
 
   })
 
+// Dev Mode - Used to show routing by scenario other than user driven
+
+function devModeRoute(req, res, next) {
+  if (!req.session.data['devMode']) {
+    console.log('no data found')
+    var devMode = req.query.devMode
+    if (devMode === 'true') {
+      console.log('devmode detected')
+      req.session.data['devMode'] = 'true'
+      console.log('local storage updated')
+    } else {
+      console.log('devmode not detected')
+    }
+  } else {
+    console.log('data found and set to ' + req.session.data['devMode'])
+  }
+  next()
+}
+
+router.get('/*', devModeRoute)
+
+
 module.exports = router
