@@ -1,0 +1,74 @@
+body.email {
+  background-color: #f3f2f1 !important;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body.email .govuk-main-wrapper {
+  padding-top: 0px !important;
+  padding-bottom: 40px;
+}
+
+.app-text-message {
+  background-color: #fff;
+  //padding: 40px;
+  max-width: 600px;
+  min-height: 420px;
+}
+
+.app-text-message-body {
+  padding: 40px;
+}
+
+.app-text-message .govuk-header {
+  padding: 20px 40px;
+}
+
+.app-text-message .govuk-header--reversed {
+  background-color: #005eb8;
+  margin: 0 0 32px 0;
+  padding-bottom: 16px;
+}
+
+.app-text-message .govuk-header__container {
+  margin: 0;
+  padding: 0;
+}
+
+body.email.app-text-message__text,
+body.email .govuk-contents-list{
+  max-width: 600px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position:relative;
+  padding:10px 30px;
+  color:black;
+}
+
+body.email .govuk-contents-list {
+  margin:10px 30px;
+}
+
+hr {
+  display: block;
+  background: #bfc1c3;
+  border: 0;
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.cid-logo {
+  height: 40px;
+  width: 100px;
+  border: 0;
+  margin-left: 30px;
+}

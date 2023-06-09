@@ -1,0 +1,78 @@
+{% extends "layout_v3.html" %}
+
+{% block pageTitle %}
+Email – {{ serviceName }}
+{% endblock %}
+
+{% set bodyClasses = "email" %}
+
+{% block headCSS %}
+<link href="/public/stylesheets/notify-email.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l govuk-!-margin-top-0">{{ pageTitle }}</h1>
+    <p><strong>Subject: </strong>Activate your advance decision account</p>
+
+    <div class="app-text-message">
+      <div class="govuk-header " role="banner" data-module="govuk-header">
+        <div class="govuk-header__container govuk-width-container">
+          <div class="govuk-header__logo">
+            <a href="/public" class="govuk-header__link govuk-header__link--homepage">
+              <span class="govuk-header__logotype">
+                <image src="{{ asset_path }}/images/CiD_Logo_on_dark.png" alt="Compassion in Dying logo" width="140" height="70"></image>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="app-text-message-body">
+
+        <h2 class="govuk-heading-m">Activate your account</h2>
+
+        <p>Thank you for creating an account.<br><br>
+
+        Please activate your account using the link below:</p>
+
+        <p><a href="success" class="govuk-button govuk-!-margin-top-3">Activate account</a></p>
+
+        <div class="govuk-inset-text govuk-!-margin-top-0">
+          <p>This link will expire in 24 hours.</p>
+        </div>
+
+        <p>You must activate your account before you can use the service to make an advance decision or advance statement.</p>
+
+        <h3 class="govuk-heading-s">Get help</h3>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Telephone: 0800 999 2434</li>
+          <li>Email: <a href="mailto:info@compassionindying.org.uk">info@compassionindying.org.uk</a></li>
+          <li>onday to Friday, 11am to 3pm (except public holidays)</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends "layout_v3.html" %}
+
+{% block pageTitle %}
+  Create an account – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-list' }}">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Create an account</h1>
+
+      <p class="govuk-body-lead">To create an account you will need to enter your email address and create a password. This will allow you to make, save and return to your forms.</p>
+
+      <p>You can create an account in your name to help someone else make an advance decision or advance statement. If you do this all of the information, statements and decisions in it must be their own.</p>
+
+      <div class="govuk-inset-text">
+        <p>
+          If you already have an account <a href="sign-in">sign in</a>.
+        </p>
+      </div>
+
+      <form action="registered" method="post" novalidate>
+
+        <h2 class="govuk-heading-m">Email address</h2>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="email-address">
+            Enter your email address
+          </label>
+          <input class="govuk-input govuk-input" id="email-address" name="email-address" type="email" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="email-address-confirm">
+            Confirm your email address
+          </label>
+          <input class="govuk-input govuk-input" id="email-address-confirm" name="email-address-confirm" type="email" spellcheck="false">
+        </div>
+
+        <h2 class="govuk-heading-m">Create a password</h2>
+
+        <p>Your password needs to have:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>at least 8 characters</li>
+          <li>at least one lower-case and one capital letter</li>
+          <li>at least one number</li>
+        </ul>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="password">
+            Password
+          </label>
+          <input class="govuk-input govuk-input" id="password" name="password" type="password" aria-describedby="password-hint">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="retype-password">
+            Confirm Password
+          </label>
+          <input class="govuk-input govuk-input" id="retype-password" name="retype-password" type="password" aria-describedby="retype-password-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="t-and-c-hint">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="t-and-c" name="t-and-c" type="checkbox" value="tcsaccepted">
+                <label class="govuk-label govuk-checkboxes__label" for="t-and-c">
+                  I agree to the <a href="#">terms of use (opens in a new tab)</a>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="future-contact-hint">
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="future-contact" name="future-contact" type="checkbox" value="yes">
+                <label class="govuk-label govuk-checkboxes__label" for="future-contact">
+                  I consent to email updates about your work
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-inset-text">
+          <h3 class="govuk-heading-s">Essential emails</h3>
+          <p>Some emails we send are essential to help you use this service and manage your account.</p>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Create account
+        </button>
+      </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -16,5 +16,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/task-list";
 @import "patterns/nhs";
 @import "patterns/account-grid";
+@import "patterns/email";
+@import "patterns/show-password";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

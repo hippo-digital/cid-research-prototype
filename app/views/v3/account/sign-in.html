@@ -1,0 +1,61 @@
+{% extends "layout_v3.html" %}
+
+{% block pageTitle %}
+Sign in – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-list' }}">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Sign in</h1>
+
+      <p class="govuk-body-lead">Sign in to start a new form or return to an existing advance decision or advance statement form.</p>
+
+      <div class="govuk-inset-text govuk-!-margin-top-0">
+       <p>If you do not already have an account you need to <a href="register">create an account</a>.</p>
+      </div>
+
+      <form action="../dashboard" method="post" novalidate>
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label" for="email-address">
+            Email Address
+          </label>
+          <input class="govuk-input govuk-input" id="email-address" name="email-address" type="text" aria-describedby="email-address-hint">
+        </div>
+
+        <div class="govuk-form-group" style="margin-bottom: 15px;">
+
+          <div class="gem-c-show-password" data-module="show-password" data-disable-form-submit-check="false" data-show-text="Show" data-hide-text="Hide" data-show-full-text="Show password" data-hide-full-text="Hide password" data-announce-show="Your password is shown" data-announce-hide="Your password is hidden">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label" for="password">
+                Password
+              </label>
+              <div class="gem-c-show-password__input-wrapper">
+                <input name="password[login]" class="gem-c-input govuk-input gem-c-input--with-password" id="password" type="password" spellcheck="false" autocomplete="off" aria-describedby="password-hint">
+                <span class="govuk-visually-hidden" aria-live="polite">Your password is hidden</span>
+              </div> <!-- /. gem-c-show-password__input-wrapper -->
+            </div> <!-- /. govuk-form-group -->
+          </div> <!-- /. gem-c-show-password -->
+
+        </div>
+
+        <button class="govuk-button govuk-!-margin-top-5" data-module="govuk-button">
+          Sign in
+        </button>
+      </form>
+
+      <div class="govuk-inset-text">
+        <h2 class="govuk-heading-s">Forgotten your password?</h2>
+        <p>If you can't remember your password, you'll need to <a href="reset-password">reset it</a>.</p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

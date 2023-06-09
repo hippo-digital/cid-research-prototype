@@ -1,0 +1,31 @@
+{% extends "layout_v3.html" %}
+
+{% block pageTitle %}
+Please check your email – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a class="govuk-back-link" href="{{ prevURL or 'healthcare-attorney-list' }}">Back</a>-->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Please check your email</h1>
+
+      <p>We’ve sent an email to <strong>{{ data['email-address'] or 'email@example.org' }}</strong></p>
+
+      <p>You need to click on the link to verify your email address and activate your account.</p>
+
+      <p>This link will expire in 24 hours or you'll need to enter your details again.</p>
+
+      <p>The email should arrive in a few minutes. If you've not received the email please check your junk or spam email folder.
+
+      <p>If it has still not arrived we can <a href="#">resend your activation email</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

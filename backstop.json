@@ -15,6 +15,26 @@
       "url": "http://localhost:3000/v3/index"
     },
     {
+      "label": "CID - register",
+      "url": "http://localhost:3000/v3/account/register"
+    },
+    {
+      "label": "CID - registered",
+      "url": "http://localhost:3000/v3/account/registered"
+    },
+    {
+      "label": "CID - email-validation",
+      "url": "http://localhost:3000/v3/account/email-validation"
+    },
+    {
+      "label": "CID - account-success",
+      "url": "http://localhost:3000/v3/account/success"
+    },
+    {
+      "label": "CID - sign-in",
+      "url": "http://localhost:3000/v3/account/sign-in"
+    },
+    {
       "label": "CID - avoid-doubt-legal",
       "url": "http://localhost:3000/v3/avoid-doubt-legal"
     },
