@@ -1,0 +1,101 @@
+{% extends "layout_v3.html" %}
+{% set signedin = "true" %}
+{% set serviceName = "Make an advance decision (living will)" %}
+{% set formsActive = "govuk-header__navigation-item--active" %}
+
+{% block pageTitle %}
+Edit your advanced decision - {{ serviceName }} - Compassion in dying
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="dashboard">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Edit your advanced decision
+      </h1>
+
+    </div>
+  </div>
+
+<!--      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>-->
+<!--      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 8 sections.</p>-->
+
+      <h2 class="govuk-heading-l govuk-!-margin-bottom-9">Your progress</h2>
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+        <ol class="app-task-list">
+          <li><h2 class="app-task-list__section"><span class="app-task-list__section-number">1. </span>Personal details
+          </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="personal-name?change=tasklist">Name</a></span><strong
+                  class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Country of residence</a></span><strong
+                  class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Address</a></span><strong
+                  class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Date of birth</a></span><strong class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong>
+              </li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Distinguishing features (optional)</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+            </ul>
+          </li>
+          <li><h2 class="app-task-list__section"><span class="app-task-list__section-number">2. </span>Healthcare
+            details</h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Healthcare Number (optional)</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">GP details</a></span><strong
+                  class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Lasting power of attorney</a></span><strong
+                  class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Attorney details (optional)</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+            </ul>
+          </li>
+          <li><h2 class="app-task-list__section"><span class="app-task-list__section-number">3. </span>Decide when to
+            refuse treatment</h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Dementia</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag">not
+                started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Brain injury</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag">not
+                started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Disease of the central nervous system</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Terminal illness</a></span><strong class="govuk-tag govuk-tag--grey app-task-list__tag">not
+                started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Other scenarios (optional)</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Legal declaration</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a href="/#">Pain relief</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+              <li class="app-task-list__item"><span class="app-task-list__task-name"><a
+                  href="/#">Your values (optional)</a></span><strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag">not started</strong></li>
+            </ul>
+          </li>
+        </ol>
+
+
+        <a href="dashboard" class="govuk-button">Return to dashboard</a>
+    </div>
+  </div>
+
+
+{% endblock %}

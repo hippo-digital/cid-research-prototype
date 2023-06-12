@@ -101,9 +101,14 @@
     {
       "label": "CID - confirmation",
       "url": "http://localhost:3000/v3/confirmation"
-    },{
+    },
+    {
       "label": "CID - dashboard",
       "url": "http://localhost:3000/v3/dashboard"
+    },
+    {
+      "label": "CID - tasklist-decision",
+      "url": "http://localhost:3000/v3/tasklist-decision"
     },
     {
       "label": "CID - healthcare-attorney-add",
