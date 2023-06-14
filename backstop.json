@@ -111,6 +111,14 @@
       "url": "http://localhost:3000/v3/tasklist-decision"
     },
     {
+      "label": "CID - tasklist-statement",
+      "url": "http://localhost:3000/v3/statement/tasklist-statement"
+    },
+    {
+      "label": "CID - delete-form",
+      "url": "http://localhost:3000/v3/delete?id=1"
+    },
+    {
       "label": "CID - healthcare-attorney-add",
       "url": "http://localhost:3000/v3/healthcare-attorney-add"
     },

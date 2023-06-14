@@ -6,6 +6,9 @@
   {% set action = '/v3/statement/check-details-1' %}
 {% elif data['change'] === 'final' %}
   {% set action = '/v3/statement/check-details-2' %}
+{% elif data['change'] === 'tasklist' %}
+  {% set backlink = 'tasklist-decision' %}
+  {% set action = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}
@@ -38,9 +41,9 @@ What is your NHS number? - {{ serviceName }} - Compassion in Dying
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>

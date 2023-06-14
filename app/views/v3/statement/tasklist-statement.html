@@ -1,6 +1,6 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
-{% set serviceName = "Make an advance decision (living will)" %}
+{% set serviceName = "Make an advance statement" %}
 {% set formsActive = "govuk-header__navigation-item--active" %}
 
 {% set completed = '<strong class="govuk-tag govuk-tag--green app-task-list__tag">completed</strong>' %}
@@ -11,26 +11,20 @@ Edit your advanced decision - {{ serviceName }} - Compassion in dying
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="dashboard">Back</a>
+<a class="govuk-back-link" href="/v3/dashboard">Back</a>
 {% endblock %}
-
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-xl">
-      Edit your advanced decision
+      Edit your advanced statement
     </h1>
-
   </div>
 </div>
 
-<!--      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>-->
-<!--      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 8 sections.</p>-->
-
 <h2 class="govuk-heading-l govuk-!-margin-bottom-9">Your progress</h2>
-
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -95,54 +89,75 @@ Edit your advanced decision - {{ serviceName }} - Compassion in dying
       <li>
         <h2 class="app-task-list__section">
           <span class="app-task-list__section-number">3. </span>
-          Decide when to
-          refuse treatment
+          Your values
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item"><span class="app-task-list__task-name">
-            <a href="refuse-dementia?change=tasklist">Dementia</a></span>
-            {% if data['refuse-dementia'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+            <a href="values-important?change=tasklist">What things are important in your life? (optional)</a></span>
+            {% if data['values-important'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
           </li>
           <li class="app-task-list__item"><span class="app-task-list__task-name">
-            <a href="refuse-brain-injury?change=tasklist">Brain injury</a></span>
-            {% if data['refuse-brain-injury'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+            <a href="values-identity?change=tasklist">What things that are important to your identity? (optional)</a></span>
+            {% if data['values-identity'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-            <a href="refuse-central-nervous?change=tasklist">Disease of the central nervous system</a></span>
-            {% if data['refuse-central-nervous'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+            <a href="values-religion?change=tasklist">Do you have any religious or spiritual beliefs? (optional)</a></span>
+            {% if data['values-religion'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
           </li>
           <li class="app-task-list__item"><span class="app-task-list__task-name">
-            <a href="refuse-terminal-illness?change=tasklist">Terminal illness</a></span>
-            {% if data['refuse-terminal-illness'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+            <a href="values-dislike?change=tasklist">What things do you dislike? (optional)</a></span>
+            {% if data['values-dislike'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-            <a href="refuse-other?change=tasklist">Other scenarios (optional)</a></span>
-            {% if data['refuse-other'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-            <a href="avoid-doubt-legal?change=tasklist">Legal declaration</a></span>
-            {% if data['legal'][0] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-            <a href="avoid-doubt-pain?change=tasklist">Pain relief</a></span>
-            {% if data['pain'][0] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span>
+          Your care
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item"><span class="app-task-list__task-name">
+            <a href="care-caring?change=tasklist">Is there anything important to know when caring for you? (optional)</a></span>
+            {% if data['care-caring'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
           </li>
           <li class="app-task-list__item"><span class="app-task-list__task-name">
-            <a href="your-values-why-refuse?change=tasklist">Your values (optional)</a></span>
-            {% if data['refuse-reasons'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+            <a href="care-food?change=tasklist">Do you have any food needs and preferences? (optional)</a></span>
+            {% if data['care-food'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+            <a href="care-where?change=tasklist">Where would you like to be cared for? (optional)</a></span>
+            {% if data['care-where'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">5. </span>
+          Your treatment
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item"><span class="app-task-list__task-name">
+            <a href="treatment-conditions?change=tasklist">Do you have any conditions or illnesses? (optional)</a></span>
+            {% if data['treatment-conditions'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+          </li>
+          <li class="app-task-list__item"><span class="app-task-list__task-name">
+            <a href="treatment-health?change=tasklist">Is there anything important to know in relation to your health? (optional)</a></span>
+            {% if data['treatment-health'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+            <a href="treatment-preference?change=tasklist">Is there anything you would prefer not to happen to you? (optional)</a></span>
+            {% if data['treatment-preference'] %}{{ completed|safe }}{% else %}{{ notstarted|safe }}{% endif %}
           </li>
         </ul>
       </li>
     </ol>
 
-    <a class="govuk-button" href="dashboard">Return to dashboard</a>
+    <a class="govuk-button" href="/v3/dashboard">Return to dashboard</a>
 
   </div>
 </div>
-
 
 {% endblock %}

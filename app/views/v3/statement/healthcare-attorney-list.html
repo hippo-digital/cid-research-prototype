@@ -7,7 +7,7 @@
 {% endif %}
 
 {% block pageTitle %}
-Your attorneys - {{ serviceName }} - Compassion in Dying
+  Your attorneys - {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}
@@ -34,8 +34,6 @@ Your attorneys - {{ serviceName }} - Compassion in Dying
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
-
-
             {# loop through the array #}
             {% for i in range(0, data['attorneys'].length) -%}
 
@@ -50,8 +48,6 @@ Your attorneys - {{ serviceName }} - Compassion in Dying
             </div>
 
             {%- endfor %}
-
-
 
           </dl>
 
@@ -91,9 +87,9 @@ Your attorneys - {{ serviceName }} - Compassion in Dying
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>

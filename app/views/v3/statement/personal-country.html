@@ -33,8 +33,7 @@
               Where do you live?
             </h1>
           </legend>
-          <div id="sign-in-hint" class="govuk-hint">You can help someone else make an advance decision. If you do this all of the information, statements and decisions must be their own.
-          </div>
+
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="country" name="country" type="radio" value="England" {{ checked('country', 'England') }}>
@@ -70,7 +69,7 @@
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-        <a class="govuk-link" href="#">Save as draft</a>
+        <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
       </div>
 
     </form>

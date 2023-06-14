@@ -502,7 +502,6 @@
 // downloadable content
 
 .gem-c-attachment {
-  font-family: "GDS Transport",arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -540,7 +539,6 @@
 }
 
 .gem-c-attachment .govuk-details__summary {
-  font-family: "GDS Transport",arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
@@ -602,14 +600,15 @@
 }
 
 .gem-c-attachment__title {
-  font-family: "GDS Transport",arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  font-size: 18px;
-  font-size: 1.125rem;
+
   line-height: 1.1111111111;
-  margin: 0 0 15px
+  margin: 0 0 15px;
+  a:link {
+    color: #32723c;
+  }
 }
 
 @media print {
@@ -620,8 +619,8 @@
 
 @media (min-width: 40.0625em) {
   .gem-c-attachment__title {
-    font-size:27px;
-    font-size: 1.6875rem;
+    //font-size:27px;
+    //font-size: 1.6875rem;
     line-height: 1.1111111111
   }
 }
@@ -638,7 +637,6 @@
 }
 
 .gem-c-attachment__metadata {
-  font-family: "GDS Transport",arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;

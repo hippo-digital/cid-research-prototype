@@ -6,6 +6,10 @@
   {% set action = '/v3/check-details-1' %}
 {% elif data['change'] === 'final' %}
   {% set action = '/v3/check-details-2' %}
+  {% set backlink = 'check-details-2' %}
+{% elif data['change'] === 'tasklist' %}
+  {% set backlink = 'tasklist-decision' %}
+  {% set action = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}
@@ -13,7 +17,7 @@ Do you have any distinguishing features? (optional) - {{ serviceName }} - Compas
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="personal-dob">Back</a>
+  <a class="govuk-back-link" href="{{ backlink or 'personal-dob'}}">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -32,15 +36,15 @@ Do you have any distinguishing features? (optional) - {{ serviceName }} - Compas
               Do you have any distinguishing features? (optional)
             </label>
           </h1>
-          <div id="features-hint" class="govuk-hint">Do not include personal or financial information, like your National Insurance number or credit card details.</div>
+          <div id="features-hint" class="govuk-hint">Include any features that would help people identify you in an emergency. For example, a birthmark, tattoo or scar.</div>
           <textarea class="govuk-textarea" id="features" name="features" rows="5" aria-describedby="features-hint">{{ data['features'] }}</textarea>
         </div>
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>

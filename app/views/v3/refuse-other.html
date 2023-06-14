@@ -3,7 +3,11 @@
 {% set serviceName = "Make an advance decision (living will)" %}
 
 {% if data['change'] === 'final' %}
-{% set action = '/v3/check-details-2' %}
+  {% set action = '/v3/check-details-2' %}
+  {% set backlink = 'check-details-2'%}
+{% elif data['change'] === 'tasklist' %}
+  {% set backlink = 'tasklist-decision' %}
+  {% set action = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}
@@ -11,7 +15,7 @@ Decide when to refuse treatment for Other scenarios – {{ serviceName }} - Comp
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="refuse-terminal-illness">Back</a>
+<a class="govuk-back-link" href="{{ backlink or 'refuse-terminal-illness'}}">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -24,7 +28,7 @@ Decide when to refuse treatment for Other scenarios – {{ serviceName }} - Comp
 
         <p class="govuk-body">The four scenarios included in this form cover the main conditions that may lead you to
           lose mental capacity and require a life-sustaining treatment.</p>
-        <div class="govuk-warning-text"><span aria-hidden="true" class="govuk-warning-text__icon">!</span><strong
+        <div class="govuk-warning-text govuk-!-margin-bottom-0"><span aria-hidden="true" class="govuk-warning-text__icon">!</span><strong
             class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
           <p class="govuk-body">You do not have to write any additional refusals of treatment here if you do not want
             to.</p></strong></div>
@@ -44,15 +48,15 @@ Decide when to refuse treatment for Other scenarios – {{ serviceName }} - Comp
             </label>
           </h2>
           <div id="refuse-other-hint" class="govuk-hint">For example, some people want to include "I refuse CPR in every situation, regardless of the cause or prognosis".</div>
-          <textarea class="govuk-textarea" id="refuse-other" name="refuse-other" rows="5" aria-describedby="refuse-other-hint">{{ data['refuse-other'] }}</textarea>
+          <textarea class="govuk-textarea" id="refuse-other" name="refuse-other" rows="10" aria-describedby="refuse-other-hint">{{ data['refuse-other'] }}</textarea>
         </div>
 
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>

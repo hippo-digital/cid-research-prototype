@@ -3,15 +3,19 @@
 {% set serviceName = "Make an advance decision (living will)" %}
 
 {% if data['change'] === 'final' %}
-{% set action = '/v3/check-details-2' %}
+  {% set action = '/v3/check-details-2' %}
+  {% set backlink = 'check-details-2'%}
+{% elif data['change'] === 'tasklist' %}
+  {% set action = 'tasklist-decision' %}
+  {% set backlink = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}
-Pain relief – {{ serviceName }} - Compassion in Dying
+  Pain relief – {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="avoid-doubt-legal">Back</a>
+  <a class="govuk-back-link" href="{{ backlink or 'avoid-doubt-legal'}}">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -57,9 +61,9 @@ Pain relief – {{ serviceName }} - Compassion in Dying
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>

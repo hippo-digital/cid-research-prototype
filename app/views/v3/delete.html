@@ -1,0 +1,58 @@
+{% extends "layout_v3.html" %}
+{% set signedin = "true" %}
+{% set formsActive = "govuk-header__navigation-item--active" %}
+
+{% block pageTitle %}
+  Your Forms - Make a living Will - Compassion in dying
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Are you sure you want to delete this form?</h1>
+
+      <p>This will only delete the information on this website. It will not delete or cancel any Advanced Decision or Advanced Statement that is currently held by the health service.</p>
+
+      <form action="/v3/delete-post" method="post" class="form">
+
+        <div class="govuk-summary-card">
+          <div class="govuk-summary-card__title-wrapper"><h2 class="govuk-summary-card__title">Advance Decision for
+            {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Philips' }}</h2>
+          </div>
+          <div class="govuk-summary-card__content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Last saved</dt>
+                <dd class="govuk-summary-list__value">2nd April</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Progress</dt>
+                <dd class="govuk-summary-list__value">Completed</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <input type="hidden" name="deleted" value="{{ id }}">
+
+        <div class="govuk-button-group">
+          <button class="govuk-button govuk-button--warning govuk-button--secondary" data-module="govuk-button">
+            Delete
+          </button>
+          <a class="govuk-link" href="dashboard">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

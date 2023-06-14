@@ -174,11 +174,16 @@ router.get('/v3/healthcare-attorney-list', function (req, res) {
 router.post('/v3/healthcare-attorney-list-post', function (req, res) {
   // get the value from the radio button
   let addattorney = req.session.data['add-attorney']
+  let action = req.session.data['change']
 
   // routing based on the answer
-  if (addattorney == "yes"){
+  if (addattorney === "yes"){
     res.redirect('/v3/healthcare-attorney-add')
-  } else {
+  } else if (action === "final"){
+    res.redirect('/v3/check-details-2')
+  } else if (action === "tasklist"){
+    res.redirect('/v3/tasklist-decision')
+  }else {
     res.redirect('/v3/check-details-1')
   }
 })
@@ -207,6 +212,19 @@ router.get('/v3/check-details-1', function (req, res) {
     'prevURL': prevURL
   })
 })
+
+router.post('/v3/delete-post', function (req, res) {
+  // pull in the array values
+  let deleted = req.session.data['delete']
+
+  // remove 1 item from the array at the place indicated by the remove link
+  // forms.splice(remove, 1);
+
+  // reload the page
+  res.redirect('/v3/dashboard')
+
+})
+
 
 // V3 STATEMENT ROUTES
 
@@ -367,11 +385,16 @@ router.get('/v3/statement/healthcare-attorney-list', function (req, res) {
 router.post('/v3/statement/healthcare-attorney-list-post', function (req, res) {
   // get the value from the radio button
   let addattorney = req.session.data['add-attorney']
+  let action = req.session.data['change']
 
   // routing based on the answer
   if (addattorney === "yes"){
     res.redirect('/v3/statement/healthcare-attorney-add')
-  } else {
+  } else if (action === "final"){
+    res.redirect('/v3/statement/check-details-2')
+  } else if (action === "tasklist"){
+    res.redirect('/v3/statement/tasklist-statement')
+  }else {
     res.redirect('/v3/statement/check-details-1')
   }
 })

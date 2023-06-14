@@ -18,8 +18,6 @@ What is your name? - {{ serviceName }} - Compassion in Dying
 
 {% block content %}
 
-
-
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
@@ -31,6 +29,8 @@ What is your name? - {{ serviceName }} - Compassion in Dying
         <h1 class="govuk-heading-l govuk-!-padding-top-0">
           What is your name?
         </h1>
+
+        <div class="govuk-hint">You can help someone else make an advance decision. If you do this all of the information, statements and decisions must be their own.</div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="first-name">
@@ -48,9 +48,9 @@ What is your name? - {{ serviceName }} - Compassion in Dying
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>

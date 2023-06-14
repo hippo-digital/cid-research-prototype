@@ -85,6 +85,12 @@ $govuk-canvas-background-colour: #ffffff;
 a.govuk-button {
 	text-decoration: none;
 }
+
+.govuk-button--warning {
+	background-color: #d4351c !important;
+	box-shadow: 0 2px 0 #55150b !important;
+	color: white !important;
+}
 // Set CID primary colours.
 $cid-dark-green: #00403a;
 $cid-mid-green: #32723c;
@@ -141,12 +147,12 @@ a:visited {
 
 .govuk-heading-xl {
     font-family: "geograph", "Arial";
-    color: #00403a;
+    color: #0b0c0c;
   }
 
 .govuk-heading-l, .govuk-fieldset__legend, .app-task-list__section, .govuk-heading-m, .govuk-heading-s, .govuk-label--l {
 font-family: "geograph", "Arial";
-color: #00403a;
+color: #0b0c0c;
 }
 
 .govuk-panel__title {
@@ -155,13 +161,13 @@ color: #00403a;
 
 // Override caption colour
 .govuk-caption-xl {
-    color: #00403a;
+    color: #0b0c0c;
 }
 
 // Override default body, paragraph and list item colours
 
 p, li, .govuk-body, .govuk-body-m {
-    color: #00403a;
+    color: #0b0c0c;
 }
 
 // Override link colour
@@ -314,8 +320,8 @@ a, a:link {
 
 .govuk-summary-card__action {
 	display: inline;
-	margin: 0 10px 0 0;
-	padding-right: 10px;
+	//margin: 0 10px 0 0;
+	padding: 0 10px;
 	border-right: 1px solid #b1b4b6
 }
 
@@ -334,13 +340,12 @@ a, a:link {
 .govuk-summary-card__action:last-child {
 	margin: 0;
 	padding-right: 0;
+	padding-left:10px;
 	border-right: none
 }
 
-@media(min-width: 40.0625em) {
-	.govuk-summary-card__action:last-child {
-		padding-left:10px
-	}
+.govuk-summary-card__action:first-child {
+	padding-left:0px
 }
 
 @media (-ms-high-contrast:none),screen and (-ms-high-contrast:active) {
@@ -453,4 +458,156 @@ a, a:link {
 .govuk-tag--green {
 	color: #005a30;
 	background: #cce2d8
+}
+
+// steps
+
+.steps {
+	padding-left: 0;
+	margin-left: 0
+}
+
+.steps>li {
+	list-style-type: none;
+	margin-left: 0;
+	padding: .75em 0 .75em 2.5em;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box
+}
+
+.steps>li:before {
+	background-color: #0b0c0c;
+	border-radius: 50%;
+	color: #fff;
+	float: left;
+	font-size: 80%;
+	height: 1.75em;
+	left: .3em;
+	line-height: 1.75em;
+	position: absolute;
+	text-align: center;
+	top: .9em;
+	width: 1.75em
+}
+
+.steps>li:nth-child(1):before {
+	content: "1"
+}
+
+.steps>li:nth-child(2):before {
+	content: "2"
+}
+
+.steps>li:nth-child(3):before {
+	content: "3"
+}
+
+.steps>li:nth-child(4):before {
+	content: "4"
+}
+
+.steps>li:nth-child(5):before {
+	content: "5"
+}
+
+.steps>li:nth-child(6):before {
+	content: "6"
+}
+
+.steps>li:nth-child(7):before {
+	content: "7"
+}
+
+.steps>li:nth-child(8):before {
+	content: "8"
+}
+
+.steps>li:nth-child(9):before {
+	content: "9"
+}
+
+.steps>li:nth-child(10):before {
+	content: "10"
+}
+
+.steps>li:nth-child(11):before {
+	content: "11"
+}
+
+.steps>li:nth-child(12):before {
+	content: "12"
+}
+
+.steps>li:nth-child(13):before {
+	content: "13"
+}
+
+.steps>li:nth-child(14):before {
+	content: "14"
+}
+
+.steps>li:nth-child(15):before {
+	content: "15"
+}
+
+.steps>li:nth-child(16):before {
+	content: "16"
+}
+
+.steps>li:nth-child(17):before {
+	content: "17"
+}
+
+.steps>li:nth-child(18):before {
+	content: "18"
+}
+
+.steps>li:nth-child(19):before {
+	content: "19"
+}
+
+.steps>li:nth-child(20):before {
+	content: "20"
+}
+
+.steps>li:nth-child(21):before {
+	content: "21"
+}
+
+.steps>li:nth-child(22):before {
+	content: "22"
+}
+
+.steps>li:nth-child(23):before {
+	content: "23"
+}
+
+.steps>li:nth-child(24):before {
+	content: "24"
+}
+
+.steps>li:nth-child(25):before {
+	content: "25"
+}
+
+.steps>li:nth-child(26):before {
+	content: "26"
+}
+
+.steps>li:nth-child(27):before {
+	content: "27"
+}
+
+.steps>li:nth-child(28):before {
+	content: "28"
+}
+
+.steps>li:nth-child(29):before {
+	content: "29"
+}
+
+.steps>li:nth-child(30):before{
+	content: "30"
 }

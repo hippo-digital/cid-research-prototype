@@ -103,7 +103,7 @@ Final check - {{ serviceName }} - Compassion in Dying
             {{ data['features'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="personal-country?change=final">
+            <a class="govuk-link" href="personal-features?change=final">
               Change<span class="govuk-visually-hidden"> distinguishing features</span>
             </a>
           </dd>
@@ -132,7 +132,7 @@ Final check - {{ serviceName }} - Compassion in Dying
             {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="{% if data['country'] === 'Scotland' %}healthcare-do-you-know-chi-no{% else %}healthcare-do-you-know-nhs-no{% endif %}?change=final">
+            <a class="govuk-link" href="{% if data['country'] === 'Scotland' %}healthcare-do-you-know-chi-no?change=final{% else %}healthcare-do-you-know-nhs-no?change=final{% endif %}?change=final">
               Change<span class="govuk-visually-hidden"> {% if data['country'] === 'Scotland' %}
             whether you know your CHI number
             {% else %}
@@ -145,7 +145,6 @@ Final check - {{ serviceName }} - Compassion in Dying
         {% endif %}
 
         {# logic to show and hide the numbers based on the yes/no and country #}
-
 
         {% if data['country'] === 'Scotland' and data['knows-chi-no'] === 'Yes' %}
         <div class="govuk-summary-list__row">
@@ -245,7 +244,7 @@ Final check - {{ serviceName }} - Compassion in Dying
             {%- endfor %}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="healthcare-attorney-list">
+            <a class="govuk-link" href="healthcare-attorney-list?change=final">
               Change<span class="govuk-visually-hidden"> licence period</span>
             </a>
           </dd>
@@ -389,9 +388,9 @@ Final check - {{ serviceName }} - Compassion in Dying
         <input type="hidden" name="details-2-checked" value="true">
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
       </form>
     </div>

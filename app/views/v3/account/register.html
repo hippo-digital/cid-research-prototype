@@ -53,12 +53,20 @@
           <li>at least one number</li>
         </ul>
 
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-label" for="password">
-            Password
-          </label>
-          <input class="govuk-input govuk-input" id="password" name="password" type="password" aria-describedby="password-hint">
+        <div class="govuk-form-group" style="margin-bottom: 15px;">
+          <div class="gem-c-show-password" data-module="show-password" data-disable-form-submit-check="false" data-show-text="Show" data-hide-text="Hide" data-show-full-text="Show password" data-hide-full-text="Hide password" data-announce-show="Your password is shown" data-announce-hide="Your password is hidden">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label" for="password">
+                Confirm new password
+              </label>
+              <div class="gem-c-show-password__input-wrapper">
+                <input name="password" class="gem-c-input govuk-input gem-c-input--with-password" id="password" type="password" spellcheck="false" autocomplete="off" aria-describedby="password-hint">
+                <span class="govuk-visually-hidden" aria-live="polite">Your password is hidden</span>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="govuk-form-group">
           <label class="govuk-label govuk-label" for="retype-password">
             Confirm Password

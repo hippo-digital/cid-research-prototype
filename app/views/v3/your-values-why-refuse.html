@@ -3,7 +3,11 @@
 {% set serviceName = "Make an advance decision (living will)" %}
 
 {% if data['change'] === 'final' %}
-{% set action = '/v3/check-details-2' %}
+  {% set action = '/v3/check-details-2' %}
+  {% set backlink = 'check-details-2'%}
+{% elif data['change'] === 'tasklist' %}
+  {% set backlink = 'tasklist-decision' %}
+  {% set action = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}
@@ -11,7 +15,7 @@ Help doctors understand why you want to refuse treatment – {{ serviceName }} -
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="avoid-doubt-pain">Back</a>
+<a class="govuk-back-link" href="{{ backlink or 'avoid-doubt-pain'}}">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,10 +30,12 @@ Help doctors understand why you want to refuse treatment – {{ serviceName }} -
 
         <p class="govuk-body">If you lose mental capacity, it's important for the doctor treating you to know why you've
           made your advance decision.</p>
-        <div class="govuk-warning-text"><span aria-hidden="true" class="govuk-warning-text__icon">!</span><strong
-            class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
+        <div class="govuk-warning-text govuk-!-margin-bottom-0">
+          <span aria-hidden="true" class="govuk-warning-text__icon">!</span>
+          <strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
           <p class="govuk-body">By explaining the reasons, your doctor can be confident that you understand and have
-            considered the decisions you've made.</p></strong></div>
+            considered the decisions you've made.</p></strong>
+        </div>
         <details class="govuk-details">
           <summary class="govuk-details__summary"><span class="govuk-details__summary-text">Read more about life-sustaining treatment</span>
           </summary>
@@ -66,14 +72,14 @@ Help doctors understand why you want to refuse treatment – {{ serviceName }} -
             </label>
           </h2>
           <div id="refuse-reasons-hint" class="govuk-hint">For example, some people make an advance decision because they have seen someone close to them being given a treatment that they would not want themselves, or there may be a particular situation that they want to avoid.</div>
-          <textarea class="govuk-textarea" id="refuse-reasons" name="refuse-reasons" rows="5" aria-describedby="refuse-reasons-hint">{{ data['refuse-reasons'] }}</textarea>
+          <textarea class="govuk-textarea" id="refuse-reasons" name="refuse-reasons" rows="10" aria-describedby="refuse-reasons-hint">{{ data['refuse-reasons'] }}</textarea>
         </div>
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
-            Continue
+            Save and continue
           </button>
-          <a class="govuk-link" href="#">Save as draft</a>
+          <a class="govuk-link" href="/v3/dashboard">Save and continue later</a>
         </div>
 
       </form>
