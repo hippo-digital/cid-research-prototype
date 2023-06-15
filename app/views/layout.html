@@ -52,8 +52,15 @@
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
+
 {% if useAutoStoreData %}
   {% block footer %}
+
+{% if feedbackLink === 'true' %}
+{% include "v3/includes/feedback.html" %}
+{% endif %}
+
+
 <footer class="govuk-footer " role="contentinfo">
   <div class="govuk-width-container ">
     <div class="govuk-footer__meta">

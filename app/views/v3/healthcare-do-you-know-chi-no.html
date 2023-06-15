@@ -1,13 +1,14 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance decision (living will)" %}
+{% set feedbackLink = 'true' %}
 
 {% if data['change'] === 'final' %}
   {% set backlink = 'check-details-2' %}
 {% elif data['change'] === 'tasklist' %}
-  {% set action = 'tasklist-decision' %}
+  {% set backlink = 'tasklist-decision' %}
 {% else %}
-  {% set action = 'personal-features' %}
+  {% set backlink = 'personal-features' %}
 {% endif %}
 
 {% block pageTitle %}

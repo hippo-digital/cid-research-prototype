@@ -1,9 +1,18 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance statement" %}
+{% set feedbackLink = 'true' %}
+
+{% if data['change'] === 'final' %}
+  {% set backlink = 'check-details-2' %}
+{% elif data['change'] === 'tasklist' %}
+  {% set backlink = 'tasklist-decision' %}
+{% else %}
+  {% set backlink = 'personal-features' %}
+{% endif %}
 
 {% block pageTitle %}
-Do you know your NHS number? (optional) - {{ serviceName }} - Compassion in Dying
+  Do you know your NHS number? (optional) - {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}

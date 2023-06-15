@@ -1,6 +1,17 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance decision (living will)" %}
+{% set feedbackLink = 'true' %}
+
+{% if data['change'] === 'true' %}
+  {% set action = 'check-details-1' %}
+{% elif data['change'] === 'final' %}
+  {% set action = 'check-details-2' %}
+{% elif data['change'] === 'tasklist' %}
+  {% set action = 'tasklist-decision' %}
+{% else %}
+  {% set action = 'personal-address' %}
+{% endif %}
 
 {% block pageTitle %}
 Understanding how advance decisions work in Scotland - {{ serviceName }} - Compassion in Dying
@@ -24,7 +35,7 @@ Understanding how advance decisions work in Scotland - {{ serviceName }} - Compa
           <p class="govuk-body">An advance directive is not legally binding but should be taken into account by
             doctors.</p>
           <p class="govuk-body">This service meets the requirements needed for an advance directive in Scotland.</p>
-          <a href="personal-address" class="govuk-button">Continue</a>
+          <a href="{{ action or 'personal-address' }}" class="govuk-button">Continue</a>
         </div>
       </div>
 

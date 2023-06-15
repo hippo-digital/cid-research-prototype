@@ -1,6 +1,8 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance decision (living will)" %}
+{% set feedbackLink = 'true' %}
+
 
 {% if data['change'] === 'true' %}
   {% set action = '/v3/check-details-1' %}

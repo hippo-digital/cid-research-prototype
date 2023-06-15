@@ -1,7 +1,9 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance statement" %}
+{% set feedbackLink = 'true' %}
 {% set NumAttorneys = data['attorneys'].length %}
+
 {% if NumAttorneys > 1 %}
   {% set attorneyText = 'attorneys' %}
 {% endif %}

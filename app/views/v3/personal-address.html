@@ -1,6 +1,8 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance decision (living will)" %}
+{% set feedbackLink = 'true' %}
+
 
 {% if data['change'] === 'true' %}
   {% set action = '/v3/check-details-1' %}
@@ -29,7 +31,6 @@ What is your address? - {{ serviceName }} - Compassion in Dying
       <form action="{{ action or '/v3/personal-dob' }}" method="post" class="form">
 
         <p class="govuk-caption-l">Personal details</p>
-
 
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">

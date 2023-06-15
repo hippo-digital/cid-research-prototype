@@ -1,13 +1,22 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance statement" %}
+{% set feedbackLink = 'true' %}
+
+{% if data['change'] === 'final' %}
+  {% set action = '/v3/statement/check-details-2' %}
+  {% set backlink = 'check-details-2' %}
+{% elif data['change'] === 'tasklist' %}
+  {% set action = '/v3/statement/tasklist-decision' %}
+  {% set backlink = 'tasklist-decision' %}
+{% endif %}
 
 {% block pageTitle %}
 Where would you like to be cared for? – {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="care-food">Back</a>
+<a class="govuk-back-link" href="{{ backlink or 'care-food' }}">Back</a>
 {% endblock %}
 
 {% block content %}

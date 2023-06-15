@@ -19,6 +19,7 @@ router.use((req, res, next) => {
 
 router.post('/v3/personal-country-post', function (req, res) {
   let country = req.session.data['country']
+  let change = req.session.data['change']
 
   if (! req.session.data['country'] ) {
     req.session.data['country'] = 'England'
@@ -28,7 +29,13 @@ router.post('/v3/personal-country-post', function (req, res) {
     // Send user to interuption page
     res.redirect('/v3/personal-country-scotland')
   } else {
-    res.redirect('/v3/personal-address')
+    if (change === "final"){
+      res.redirect('/v3/check-details-2')
+    } else if (change === "tasklist") {
+      res.redirect('/v3/tasklist-decision')
+    } else {
+      res.redirect('/v3/personal-address')
+    }
   }
 })
 

@@ -1,11 +1,14 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance statement" %}
+{% set feedbackLink = 'true' %}
 
 {% if data['change'] === 'true' %}
   {% set action = '/v3/statement/check-details-1' %}
 {% elif data['change'] === 'final' %}
   {% set action = '/v3/statement/check-details-2' %}
+{% elif data['change'] === 'tasklist' %}
+  {% set action = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}

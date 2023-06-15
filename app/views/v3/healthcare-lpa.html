@@ -1,18 +1,21 @@
 {% extends "layout_v3.html" %}
 {% set signedin = "true" %}
 {% set serviceName = "Make an advance decision (living will)" %}
+{% set feedbackLink = 'true' %}
 
 {% if data['change'] === 'true' %}
-  {% set action = '/v3/check-details-1' %}
+  {% set backlink = '/v3/statement/check-details-1' %}
+  {% set action = '/v3/statement/check-details-1' %}
 {% elif data['change'] === 'final' %}
-  {% set action = '/v3/check-details-2' %}
+  {% set backlink = '/v3/statement/check-details-2' %}
+  {% set action = '/v3/statement/check-details-2' %}
 {% elif data['change'] === 'tasklist' %}
   {% set backlink = 'tasklist-decision' %}
   {% set action = 'tasklist-decision' %}
 {% endif %}
 
 {% block pageTitle %}
-Do you know your NHS number? (optional) - {{ serviceName }} - Compassion in Dying
+  Do you know your NHS number? (optional) - {{ serviceName }} - Compassion in Dying
 {% endblock %}
 
 {% block beforeContent %}
