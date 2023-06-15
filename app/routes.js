@@ -215,7 +215,30 @@ router.get('/v3/check-details-1', function (req, res) {
   res.locals.prevURL = req.get('Referrer')
   prevURL = res.locals.prevURL
 
+  req.session.data['change'] = ''
   return res.render('v3/check-details-1', {
+    'prevURL': prevURL
+  })
+})
+
+// generate back link
+router.get('/v3/check-details-2', function (req, res) {
+  res.locals.prevURL = req.get('Referrer')
+  prevURL = res.locals.prevURL
+
+  req.session.data['change'] = ''
+  return res.render('v3/check-details-2', {
+    'prevURL': prevURL
+  })
+})
+
+// generate back link
+router.get('/v3/tasklist-decision', function (req, res) {
+  res.locals.prevURL = req.get('Referrer')
+  prevURL = res.locals.prevURL
+
+  req.session.data['change'] = ''
+  return res.render('v3/tasklist-decision', {
     'prevURL': prevURL
   })
 })
@@ -229,7 +252,6 @@ router.post('/v3/delete-post', function (req, res) {
 
   // reload the page
   res.redirect('/v3/dashboard')
-
 })
 
 
@@ -426,7 +448,30 @@ router.get('/v3/statement/check-details-1', function (req, res) {
   res.locals.prevURL = req.get('Referrer')
   prevURL = res.locals.prevURL
 
+  req.session.data['change'] = ''
   return res.render('v3/statement/check-details-1', {
+    'prevURL': prevURL
+  })
+})
+
+// generate back link
+router.get('/v3/statement/check-details-2', function (req, res) {
+  res.locals.prevURL = req.get('Referrer')
+  prevURL = res.locals.prevURL
+
+  req.session.data['change'] = ''
+  return res.render('v3/statement/check-details-2', {
+    'prevURL': prevURL
+  })
+})
+
+// generate back link
+router.get('/v3/statement/tasklist-statement', function (req, res) {
+  res.locals.prevURL = req.get('Referrer')
+  prevURL = res.locals.prevURL
+
+  req.session.data['change'] = ''
+  return res.render('v3/statement/tasklist-decision', {
     'prevURL': prevURL
   })
 })
